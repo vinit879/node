@@ -5,11 +5,12 @@ const path = require("path");
 
 const app = express();
 
-// Define paths for streams and logs on the desktop
-const streamsPath = "/home/vctech/Desktop/live-stream-app/streams";
-const logsPath = "/home/vctech/Desktop/live-stream-app/logs";
+// Define paths for streams and logs on Vercel
+const streamsPath = "/tmp/streams"; // Temporary directory in Vercel
+const logsPath = "/tmp/logs"; // Temporary logs directory
+const ffmpegPath = "ffmpeg"; // Make sure ffmpeg is available in Vercel's environment
 
-// Ensure streams and logs folders exist
+// Ensure directories exist in the Vercel environment
 if (!fs.existsSync(streamsPath)) {
     fs.mkdirSync(streamsPath, { recursive: true });
 }
@@ -17,8 +18,7 @@ if (!fs.existsSync(logsPath)) {
     fs.mkdirSync(logsPath, { recursive: true });
 }
 
-// FFmpeg path and RTSP configuration
-const ffmpegPath = "ffmpeg"; // Update this if FFmpeg is installed in a different location
+// List of channels to stream
 const channels = [
     { channel: 102, ip: "10.11.12.21" },
     { channel: 202, ip: "10.11.12.21" },
@@ -44,14 +44,12 @@ channels.forEach(({ channel, ip }) => {
     const outputPath = `${streamsPath}/stream${channel}.m3u8`;
     const logFile = `${logsPath}/stream${channel}_ffmpeg.log`;
 
-    // FFmpeg command
     const ffmpegCommand = `${ffmpegPath} -loglevel verbose -rtsp_transport tcp -max_delay 5000000 -i "${rtspUrl}" -r 15 -vcodec hevc_cuvid -c:v libx264 -preset ultrafast -an -f hls -hls_time 2 -hls_list_size 3 -hls_flags delete_segments "${outputPath}"`;
 
     console.log(`Starting FFmpeg for channel ${channel}...`);
 
     const childProcess = exec(ffmpegCommand);
 
-    // Log FFmpeg output to a file
     const logFileStream = fs.createWriteStream(logFile, { flags: "a" });
     childProcess.stdout.pipe(logFileStream);
     childProcess.stderr.pipe(logFileStream);
@@ -114,9 +112,6 @@ app.get("/all-streams", (req, res) => {
     `);
 });
 
-// Start server
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}/all-streams`);
-});
+// Export as serverless function
+module.exports = app;
 
