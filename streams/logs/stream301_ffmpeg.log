@@ -1,0 +1,1659 @@
+ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 13 (Ubuntu 13.2.0-23ubuntu3)
+  configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+[tcp @ 0x5657b204c540] Starting connection attempt to 10.11.12.21 port 1024
+[tcp @ 0x5657b204c540] Successfully connected to 10.11.12.21 port 1024
+[rtsp @ 0x5657b2086540] SDP:
+v=0
+o=- 1109162014219182 0 IN IP4 0.0.0.0
+s=HIK Media Server V4.32.110
+i=HIK Media Server Session Description : standard
+e=NONE
+c=IN IP4 0.0.0.0
+t=0 0
+a=control:*
+b=AS:1034
+a=range:npt=now-
+m=video 0 RTP/AVP 96
+i=Video Media
+a=rtpmap:96 H265/90000
+a=control:trackID=video
+b=AS:1024
+a=Media_header:MEDIAINFO=494D4B48020100000400050000000000000000000000000000000000000000000000000000000000;
+a=appversion:1.0
+
+[rtsp @ 0x5657b2086540] setting jitter buffer size to 0
+[hevc @ 0x5657b208a900] PPS id out of range: 0
+    Last message repeated 1 times
+[hevc @ 0x5657b208a900] Error parsing NAL unit #0.
+Input #0, rtsp, from 'rtsp://admin:vct280620@10.11.12.21:1024/Streaming/Channels/301':
+  Metadata:
+    title           : HIK Media Server V4.32.110
+    comment         : HIK Media Server Session Description : standard
+  Duration: N/A, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: hevc (Main), 1 reference frame, yuvj420p(pc, bt709, left), 1280x720, 8 fps, 8 tbr, 90k tbn
+[out#0/hls @ 0x5657b20b3800] No explicit maps, mapping streams automatically...
+Multiple -c, -codec, -acodec, -vcodec, -scodec or -dcodec options specified for stream 0, only the last option '-c:v libx264' will be used.
+[vost#0:0/libx264 @ 0x5657b20c02c0] Created video stream from input stream 0:0
+Stream mapping:
+  Stream #0:0 -> #0:0 (hevc (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[hevc @ 0x5657b20c6280] Could not find ref with POC 16
+[graph 0 input from stream 0:0 @ 0x5657b21fb280] w:1280 h:720 pixfmt:yuvj420p tb:1/90000 fr:8/1 sar:0/1
+[vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+[libx264 @ 0x5657b20c0580] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0x5657b20c0580] profile Constrained Baseline, level 3.1, 4:2:0, 8-bit
+[libx264 @ 0x5657b20c0580] 264 - core 164 r3108 31e19f9 - H.264/MPEG-4 AVC codec - Copyleft 2003-2023 - http://www.videolan.org/x264.html - options: cabac=0 ref=1 deblock=0:0:0 analyse=0:0 me=dia subme=0 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=0 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=0 weightp=0 keyint=250 keyint_min=15 scenecut=0 intra_refresh=0 rc=crf mbtree=0 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=0
+[mpegts @ 0x5657b45e4140] service 1 using PCR in pid=256, pcr_period=0ms
+[mpegts @ 0x5657b45e4140] muxrate VBR, sdt every 1073741822000 ms, pat/pmt every 1073741822000 ms
+Output #0, hls, to '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8':
+  Metadata:
+    title           : HIK Media Server V4.32.110
+    comment         : HIK Media Server Session Description : standard
+    encoder         : Lavf60.16.100
+  Stream #0:0: Video: h264, 1 reference frame, yuvj420p(pc, bt709, progressive, left), 1280x720 (0x0), q=2-31, 15 fps, 90k tbn
+    Metadata:
+      encoder         : Lavc60.31.102 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    0 fps=0.0 q=0.0 size=       0kB time=N/A bitrate=N/A dup=1 drop=0 speed=N/A    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 15 times
+frame=   22 fps=0.0 q=17.0 size=N/A time=00:00:01.46 bitrate=N/A dup=17 drop=0 speed=2.53x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=   31 fps= 26 q=16.0 size=N/A time=00:00:02.06 bitrate=N/A dup=21 drop=0 speed=1.71x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=   40 fps= 23 q=18.0 size=N/A time=00:00:02.66 bitrate=N/A dup=25 drop=0 speed=1.54x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=   48 fps= 22 q=16.0 size=N/A time=00:00:03.20 bitrate=N/A dup=29 drop=0 speed=1.43x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame=   55 fps= 20 q=18.0 size=N/A time=00:00:03.66 bitrate=N/A dup=32 drop=0 speed=1.33x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=   65 fps= 20 q=16.0 size=N/A time=00:00:04.33 bitrate=N/A dup=37 drop=0 speed=1.31x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame=   70 fps= 15 q=18.0 size=N/A time=00:00:04.66 bitrate=N/A dup=39 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 8 times
+frame=   89 fps= 18 q=17.0 size=N/A time=00:00:05.93 bitrate=N/A dup=48 drop=0 speed=1.17x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=   97 fps= 17 q=16.0 size=N/A time=00:00:06.46 bitrate=N/A dup=52 drop=0 speed=1.15x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  108 fps= 17 q=16.0 size=N/A time=00:00:07.20 bitrate=N/A dup=57 drop=0 speed=1.16x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame=  115 fps= 17 q=18.0 size=N/A time=00:00:07.66 bitrate=N/A dup=60 drop=0 speed=1.14x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  123 fps= 17 q=16.0 size=N/A time=00:00:08.20 bitrate=N/A dup=64 drop=0 speed=1.14x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame=  130 fps= 17 q=18.0 size=N/A time=00:00:08.66 bitrate=N/A dup=67 drop=0 speed=1.12x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  140 fps= 17 q=15.0 size=N/A time=00:00:09.33 bitrate=N/A dup=72 drop=0 speed=1.12x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  149 fps= 17 q=17.0 size=N/A time=00:00:09.93 bitrate=N/A dup=76 drop=0 speed=1.11x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  159 fps= 17 q=16.0 size=N/A time=00:00:10.60 bitrate=N/A dup=81 drop=0 speed= 1.1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame=  164 fps= 15 q=17.0 size=N/A time=00:00:10.93 bitrate=N/A dup=83 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 7 times
+frame=  181 fps= 16 q=17.0 size=N/A time=00:00:12.06 bitrate=N/A dup=91 drop=0 speed=1.08x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  190 fps= 16 q=19.0 size=N/A time=00:00:12.66 bitrate=N/A dup=95 drop=0 speed=1.08x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  200 fps= 16 q=16.0 size=N/A time=00:00:13.33 bitrate=N/A dup=100 drop=0 speed=1.08x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame=  207 fps= 16 q=19.0 size=N/A time=00:00:13.80 bitrate=N/A dup=103 drop=0 speed=1.07x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  217 fps= 16 q=17.0 size=N/A time=00:00:14.46 bitrate=N/A dup=108 drop=0 speed=1.06x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  226 fps= 16 q=17.0 size=N/A time=00:00:15.06 bitrate=N/A dup=112 drop=0 speed=1.06x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  235 fps= 16 q=20.0 size=N/A time=00:00:15.66 bitrate=N/A dup=116 drop=0 speed=1.06x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  246 fps= 16 q=18.0 size=N/A time=00:00:16.33 bitrate=N/A dup=121 drop=0 speed=1.07x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame=  250 fps= 16 q=20.0 size=N/A time=00:00:16.66 bitrate=N/A dup=123 drop=0 speed=1.05x    [hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream3010.ts' for writing
+[AVIOContext @ 0x70d534041040] Statistics: 9564876 bytes written, 0 seeks, 37 writeouts
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:0
+[AVIOContext @ 0x70d534041040] Statistics: 107 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  258 fps= 16 q=17.0 size=N/A time=00:00:17.20 bitrate=N/A dup=127 drop=0 speed=1.04x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  269 fps= 16 q=18.0 size=N/A time=00:00:17.93 bitrate=N/A dup=132 drop=0 speed=1.04x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  281 fps= 16 q=20.0 size=N/A time=00:00:18.66 bitrate=N/A dup=137 drop=0 speed=1.05x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  290 fps= 16 q=17.0 size=N/A time=00:00:19.33 bitrate=N/A dup=142 drop=0 speed=1.05x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  299 fps= 16 q=18.0 size=N/A time=00:00:19.93 bitrate=N/A dup=146 drop=0 speed=1.05x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  309 fps= 16 q=16.0 size=N/A time=00:00:20.60 bitrate=N/A dup=151 drop=0 speed=1.05x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame=  316 fps= 16 q=16.0 size=N/A time=00:00:21.06 bitrate=N/A dup=154 drop=0 speed=1.05x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  324 fps= 16 q=16.0 size=N/A time=00:00:21.60 bitrate=N/A dup=158 drop=0 speed=1.05x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  333 fps= 16 q=17.0 size=N/A time=00:00:22.20 bitrate=N/A dup=162 drop=0 speed=1.05x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame=  340 fps= 16 q=19.0 size=N/A time=00:00:22.66 bitrate=N/A dup=165 drop=0 speed=1.04x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  350 fps= 16 q=16.0 size=N/A time=00:00:23.33 bitrate=N/A dup=170 drop=0 speed=1.04x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame=  354 fps= 15 q=16.0 size=N/A time=00:00:23.60 bitrate=N/A dup=172 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 6 times
+frame=  370 fps= 16 q=18.0 size=N/A time=00:00:24.60 bitrate=N/A dup=179 drop=0 speed=1.04x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  378 fps= 16 q=17.0 size=N/A time=00:00:25.20 bitrate=N/A dup=183 drop=0 speed=1.04x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  387 fps= 16 q=19.0 size=N/A time=00:00:25.80 bitrate=N/A dup=187 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame=  399 fps= 16 q=16.0 size=N/A time=00:00:26.60 bitrate=N/A dup=193 drop=0 speed=1.04x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame=  407 fps= 16 q=17.0 size=N/A time=00:00:27.06 bitrate=N/A dup=196 drop=0 speed=1.04x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  414 fps= 16 q=17.0 size=N/A time=00:00:27.60 bitrate=N/A dup=200 drop=0 speed=1.04x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  422 fps= 15 q=17.0 size=N/A time=00:00:28.20 bitrate=N/A dup=204 drop=0 speed=1.04x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  432 fps= 16 q=19.0 size=N/A time=00:00:28.80 bitrate=N/A dup=208 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  440 fps= 15 q=17.0 size=N/A time=00:00:29.33 bitrate=N/A dup=212 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame=  445 fps= 15 q=19.0 size=N/A time=00:00:29.66 bitrate=N/A dup=214 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 6 times
+frame=  460 fps= 15 q=22.0 size=N/A time=00:00:30.66 bitrate=N/A dup=221 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame=  472 fps= 15 q=17.0 size=N/A time=00:00:31.46 bitrate=N/A dup=227 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  481 fps= 15 q=16.0 size=N/A time=00:00:32.06 bitrate=N/A dup=231 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  489 fps= 15 q=15.0 size=N/A time=00:00:32.60 bitrate=N/A dup=235 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  498 fps= 15 q=17.0 size=N/A time=00:00:33.20 bitrate=N/A dup=239 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream3011.ts' for writing
+[AVIOContext @ 0x70d534041040] Statistics: 9971144 bytes written, 0 seeks, 39 writeouts
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:0
+[AVIOContext @ 0x70d534041040] Statistics: 140 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame=  507 fps= 15 q=18.0 size=N/A time=00:00:33.80 bitrate=N/A dup=243 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  515 fps= 15 q=16.0 size=N/A time=00:00:34.33 bitrate=N/A dup=247 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame=  522 fps= 15 q=18.0 size=N/A time=00:00:34.80 bitrate=N/A dup=250 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  532 fps= 15 q=16.0 size=N/A time=00:00:35.46 bitrate=N/A dup=255 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame=  539 fps= 15 q=17.0 size=N/A time=00:00:35.93 bitrate=N/A dup=258 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 7 times
+frame=  556 fps= 15 q=17.0 size=N/A time=00:00:37.06 bitrate=N/A dup=266 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  567 fps= 15 q=18.0 size=N/A time=00:00:37.80 bitrate=N/A dup=271 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  578 fps= 15 q=17.0 size=N/A time=00:00:38.46 bitrate=N/A dup=276 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame=  584 fps= 15 q=17.0 size=N/A time=00:00:38.93 bitrate=N/A dup=279 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  594 fps= 15 q=16.0 size=N/A time=00:00:39.60 bitrate=N/A dup=284 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  602 fps= 15 q=16.0 size=N/A time=00:00:40.20 bitrate=N/A dup=288 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame=  610 fps= 15 q=19.0 size=N/A time=00:00:40.66 bitrate=N/A dup=291 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  620 fps= 15 q=16.0 size=N/A time=00:00:41.33 bitrate=N/A dup=296 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  629 fps= 15 q=17.0 size=N/A time=00:00:41.93 bitrate=N/A dup=300 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame=  633 fps= 15 q=16.0 size=N/A time=00:00:42.20 bitrate=N/A dup=302 drop=0 speed=0.991x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 12 times
+frame=  662 fps= 15 q=16.0 size=N/A time=00:00:44.06 bitrate=N/A dup=315 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  671 fps= 15 q=18.0 size=N/A time=00:00:44.80 bitrate=N/A dup=320 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  682 fps= 15 q=17.0 size=N/A time=00:00:45.46 bitrate=N/A dup=325 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  693 fps= 15 q=17.0 size=N/A time=00:00:46.20 bitrate=N/A dup=330 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame=  700 fps= 15 q=20.0 size=N/A time=00:00:46.66 bitrate=N/A dup=333 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  710 fps= 15 q=17.0 size=N/A time=00:00:47.33 bitrate=N/A dup=338 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  720 fps= 15 q=17.0 size=N/A time=00:00:47.93 bitrate=N/A dup=342 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  727 fps= 15 q=17.0 size=N/A time=00:00:48.46 bitrate=N/A dup=346 drop=0 speed=0.995x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 9 times
+frame=  749 fps= 15 q=18.0 size=N/A time=00:00:49.93 bitrate=N/A dup=356 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream3012.ts' for writing
+[AVIOContext @ 0x70d534041040] Statistics: 9682376 bytes written, 0 seeks, 37 writeouts
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:0
+[AVIOContext @ 0x70d534041040] Statistics: 173 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  760 fps= 15 q=19.0 size=N/A time=00:00:50.66 bitrate=N/A dup=361 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  768 fps= 15 q=18.0 size=N/A time=00:00:51.20 bitrate=N/A dup=365 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  777 fps= 15 q=20.0 size=N/A time=00:00:51.80 bitrate=N/A dup=369 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  788 fps= 15 q=18.0 size=N/A time=00:00:52.46 bitrate=N/A dup=374 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame=  794 fps= 15 q=19.0 size=N/A time=00:00:52.93 bitrate=N/A dup=377 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  802 fps= 15 q=19.0 size=N/A time=00:00:53.46 bitrate=N/A dup=381 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  813 fps= 15 q=19.0 size=N/A time=00:00:54.20 bitrate=N/A dup=386 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame=  820 fps= 15 q=22.0 size=N/A time=00:00:54.66 bitrate=N/A dup=389 drop=0 speed=0.998x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 7 times
+frame=  837 fps= 15 q=22.0 size=N/A time=00:00:55.80 bitrate=N/A dup=397 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame=  850 fps= 15 q=22.0 size=N/A time=00:00:56.66 bitrate=N/A dup=403 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame=  862 fps= 15 q=19.0 size=N/A time=00:00:57.46 bitrate=N/A dup=409 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame=  869 fps= 15 q=20.0 size=N/A time=00:00:57.93 bitrate=N/A dup=412 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  877 fps= 15 q=20.0 size=N/A time=00:00:58.46 bitrate=N/A dup=416 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  886 fps= 15 q=19.0 size=N/A time=00:00:59.06 bitrate=N/A dup=420 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  895 fps= 15 q=22.0 size=N/A time=00:00:59.66 bitrate=N/A dup=424 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  905 fps= 15 q=19.0 size=N/A time=00:01:00.33 bitrate=N/A dup=429 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame=  912 fps= 15 q=21.0 size=N/A time=00:01:00.80 bitrate=N/A dup=432 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+frame=  914 fps= 15 q=19.0 size=N/A time=00:01:00.93 bitrate=N/A dup=433 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 6 times
+frame=  929 fps= 15 q=21.0 size=N/A time=00:01:01.93 bitrate=N/A dup=440 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  939 fps= 15 q=17.0 size=N/A time=00:01:02.60 bitrate=N/A dup=445 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame=  947 fps= 15 q=17.0 size=N/A time=00:01:03.06 bitrate=N/A dup=448 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  954 fps= 15 q=17.0 size=N/A time=00:01:03.60 bitrate=N/A dup=452 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  964 fps= 15 q=17.0 size=N/A time=00:01:04.20 bitrate=N/A dup=456 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  972 fps= 15 q=19.0 size=N/A time=00:01:04.80 bitrate=N/A dup=460 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame=  983 fps= 15 q=18.0 size=N/A time=00:01:05.46 bitrate=N/A dup=465 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame=  991 fps= 15 q=23.0 size=N/A time=00:01:06.06 bitrate=N/A dup=469 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1000 fps= 15 q=17.0 size=N/A time=00:01:06.60 bitrate=N/A dup=473 drop=0 speed=1.01x    [hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream3013.ts' for writing
+[AVIOContext @ 0x70d534041040] Statistics: 11185624 bytes written, 0 seeks, 43 writeouts
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:1
+[AVIOContext @ 0x70d534041040] Statistics: 173 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 1006 fps= 15 q=17.0 size=N/A time=00:01:07.06 bitrate=N/A dup=476 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+frame= 1008 fps= 15 q=17.0 size=N/A time=00:01:07.20 bitrate=N/A dup=477 drop=0 speed=0.998x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 9 times
+frame= 1030 fps= 15 q=19.0 size=N/A time=00:01:08.66 bitrate=N/A dup=487 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1040 fps= 15 q=16.0 size=N/A time=00:01:09.33 bitrate=N/A dup=492 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 1047 fps= 15 q=18.0 size=N/A time=00:01:09.80 bitrate=N/A dup=495 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1058 fps= 15 q=16.0 size=N/A time=00:01:10.46 bitrate=N/A dup=500 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 1064 fps= 15 q=17.0 size=N/A time=00:01:10.93 bitrate=N/A dup=503 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1072 fps= 15 q=16.0 size=N/A time=00:01:11.46 bitrate=N/A dup=507 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1083 fps= 15 q=17.0 size=N/A time=00:01:12.20 bitrate=N/A dup=512 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 1090 fps= 15 q=19.0 size=N/A time=00:01:12.66 bitrate=N/A dup=515 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1100 fps= 15 q=16.0 size=N/A time=00:01:13.33 bitrate=N/A dup=520 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+frame= 1101 fps= 15 q=16.0 size=N/A time=00:01:13.46 bitrate=N/A dup=521 drop=0 speed=0.999x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 7 times
+frame= 1120 fps= 15 q=18.0 size=N/A time=00:01:14.66 bitrate=N/A dup=529 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 1132 fps= 15 q=16.0 size=N/A time=00:01:15.46 bitrate=N/A dup=535 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 1139 fps= 15 q=17.0 size=N/A time=00:01:15.93 bitrate=N/A dup=538 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1147 fps= 15 q=17.0 size=N/A time=00:01:16.46 bitrate=N/A dup=542 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 1160 fps= 15 q=16.0 size=N/A time=00:01:17.33 bitrate=N/A dup=548 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 1167 fps= 15 q=18.0 size=N/A time=00:01:17.80 bitrate=N/A dup=551 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+frame= 1169 fps= 15 q=17.0 size=N/A time=00:01:17.93 bitrate=N/A dup=552 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 7 times
+frame= 1187 fps= 15 q=17.0 size=N/A time=00:01:19.06 bitrate=N/A dup=560 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1193 fps= 15 q=17.0 size=N/A time=00:01:19.60 bitrate=N/A dup=564 drop=0 speed=1.01x    frame= 1195 fps= 15 q=19.0 size=N/A time=00:01:19.66 bitrate=N/A dup=564 drop=0 speed=0.99x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 6 times
+frame= 1209 fps= 15 q=17.0 size=N/A time=00:01:20.60 bitrate=N/A dup=571 drop=0 speed=0.994x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1220 fps= 15 q=17.0 size=N/A time=00:01:21.33 bitrate=N/A dup=576 drop=0 speed=0.996x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 6 times
+frame= 1235 fps= 15 q=17.0 size=N/A time=00:01:22.33 bitrate=N/A dup=583 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 6 times
+frame= 1250 fps= 15 q=16.0 size=N/A time=00:01:23.33 bitrate=N/A dup=590 drop=0 speed=1.01x    [hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream3014.ts' for writing
+[AVIOContext @ 0x70d534041040] Statistics: 10072664 bytes written, 0 seeks, 39 writeouts
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:2
+[AVIOContext @ 0x70d534041040] Statistics: 173 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 1263 fps= 15 q=17.0 size=N/A time=00:01:24.20 bitrate=N/A dup=596 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 1270 fps= 15 q=19.0 size=N/A time=00:01:24.66 bitrate=N/A dup=599 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 1282 fps= 15 q=17.0 size=N/A time=00:01:25.46 bitrate=N/A dup=605 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 1289 fps= 15 q=18.0 size=N/A time=00:01:25.93 bitrate=N/A dup=608 drop=0 speed=0.994x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 9 times
+frame= 1310 fps= 15 q=17.0 size=N/A time=00:01:27.33 bitrate=N/A dup=618 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1319 fps= 15 q=18.0 size=N/A time=00:01:27.93 bitrate=N/A dup=622 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 6 times
+frame= 1334 fps= 15 q=17.0 size=N/A time=00:01:28.93 bitrate=N/A dup=629 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 1339 fps= 15 q=17.0 size=N/A time=00:01:29.20 bitrate=N/A dup=631 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 1351 fps= 15 q=17.0 size=N/A time=00:01:30.06 bitrate=N/A dup=637 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1360 fps= 15 q=19.0 size=N/A time=00:01:30.66 bitrate=N/A dup=641 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1370 fps= 15 q=16.0 size=N/A time=00:01:31.33 bitrate=N/A dup=646 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1380 fps= 15 q=17.0 size=N/A time=00:01:31.93 bitrate=N/A dup=650 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 1383 fps= 15 q=16.0 size=N/A time=00:01:32.20 bitrate=N/A dup=652 drop=0 speed=0.996x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 1396 fps= 15 q=17.0 size=N/A time=00:01:33.06 bitrate=N/A dup=658 drop=0 speed=0.999x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 7 times
+frame= 1413 fps= 15 q=17.0 size=N/A time=00:01:34.20 bitrate=N/A dup=666 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1424 fps= 15 q=17.0 size=N/A time=00:01:34.93 bitrate=N/A dup=671 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1434 fps= 15 q=16.0 size=N/A time=00:01:35.60 bitrate=N/A dup=676 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1443 fps= 15 q=17.0 size=N/A time=00:01:36.20 bitrate=N/A dup=680 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 1450 fps= 15 q=19.0 size=N/A time=00:01:36.66 bitrate=N/A dup=683 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 6 times
+frame= 1464 fps= 15 q=16.0 size=N/A time=00:01:37.60 bitrate=N/A dup=690 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1473 fps= 15 q=17.0 size=N/A time=00:01:38.20 bitrate=N/A dup=694 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 1477 fps= 15 q=16.0 size=N/A time=00:01:38.46 bitrate=N/A dup=696 drop=0 speed=0.988x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1487 fps= 15 q=17.0 size=N/A time=00:01:39.20 bitrate=N/A dup=701 drop=0 speed=0.989x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1497 fps= 15 q=18.0 size=N/A time=00:01:39.80 bitrate=N/A dup=705 drop=0 speed=0.99x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream3015.ts' for writing
+[AVIOContext @ 0x70d534041040] Statistics: 9397744 bytes written, 0 seeks, 36 writeouts
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:3
+[AVIOContext @ 0x70d534041040] Statistics: 173 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1509 fps= 15 q=16.0 size=N/A time=00:01:40.60 bitrate=N/A dup=711 drop=0 speed=0.993x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1518 fps= 15 q=17.0 size=N/A time=00:01:41.20 bitrate=N/A dup=715 drop=0 speed=0.993x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1529 fps= 15 q=17.0 size=N/A time=00:01:41.93 bitrate=N/A dup=720 drop=0 speed=0.995x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 1542 fps= 15 q=18.0 size=N/A time=00:01:42.80 bitrate=N/A dup=726 drop=0 speed=0.999x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 7 times
+frame= 1559 fps= 15 q=17.0 size=N/A time=00:01:43.93 bitrate=N/A dup=734 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1570 fps= 15 q=18.0 size=N/A time=00:01:44.66 bitrate=N/A dup=739 drop=0 speed=0.998x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 7 times
+frame= 1587 fps= 15 q=19.0 size=N/A time=00:01:45.80 bitrate=N/A dup=747 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 6 times
+frame= 1602 fps= 15 q=18.0 size=N/A time=00:01:46.80 bitrate=N/A dup=754 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1612 fps= 15 q=16.0 size=N/A time=00:01:47.46 bitrate=N/A dup=759 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 1620 fps= 15 q=16.0 size=N/A time=00:01:47.93 bitrate=N/A dup=762 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1627 fps= 15 q=16.0 size=N/A time=00:01:48.46 bitrate=N/A dup=766 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1638 fps= 15 q=16.0 size=N/A time=00:01:49.20 bitrate=N/A dup=771 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 1645 fps= 15 q=19.0 size=N/A time=00:01:49.66 bitrate=N/A dup=774 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1655 fps= 15 q=16.0 size=N/A time=00:01:50.33 bitrate=N/A dup=779 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 1660 fps= 15 q=19.0 size=N/A time=00:01:50.66 bitrate=N/A dup=781 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 1664 fps= 15 q=17.0 size=N/A time=00:01:50.93 bitrate=N/A dup=783 drop=0 speed=0.998x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 8 times
+frame= 1683 fps= 15 q=16.0 size=N/A time=00:01:52.20 bitrate=N/A dup=792 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1693 fps= 15 q=17.0 size=N/A time=00:01:52.93 bitrate=N/A dup=797 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1705 fps= 15 q=18.0 size=N/A time=00:01:53.66 bitrate=N/A dup=802 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1716 fps= 15 q=15.0 size=N/A time=00:01:54.33 bitrate=N/A dup=807 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1725 fps= 15 q=17.0 size=N/A time=00:01:54.93 bitrate=N/A dup=811 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1734 fps= 15 q=16.0 size=N/A time=00:01:55.60 bitrate=N/A dup=816 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 1741 fps= 15 q=23.0 size=N/A time=00:01:56.06 bitrate=N/A dup=819 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1750 fps= 15 q=18.0 size=N/A time=00:01:56.66 bitrate=N/A dup=823 drop=0 speed=1.01x    [hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream3016.ts' for writing
+[AVIOContext @ 0x70d534041040] Statistics: 10310296 bytes written, 0 seeks, 40 writeouts
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:4
+[AVIOContext @ 0x70d534041040] Statistics: 173 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1758 fps= 15 q=16.0 size=N/A time=00:01:57.20 bitrate=N/A dup=827 drop=0 speed=0.998x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 1771 fps= 15 q=16.0 size=N/A time=00:01:58.06 bitrate=N/A dup=833 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 8 times
+frame= 1790 fps= 15 q=16.0 size=N/A time=00:01:59.33 bitrate=N/A dup=842 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1799 fps= 15 q=17.0 size=N/A time=00:01:59.93 bitrate=N/A dup=846 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1809 fps= 15 q=16.0 size=N/A time=00:02:00.60 bitrate=N/A dup=851 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 1816 fps= 15 q=16.0 size=N/A time=00:02:01.06 bitrate=N/A dup=854 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1824 fps= 15 q=16.0 size=N/A time=00:02:01.60 bitrate=N/A dup=858 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1833 fps= 15 q=17.0 size=N/A time=00:02:02.20 bitrate=N/A dup=862 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 1839 fps= 15 q=17.0 size=N/A time=00:02:02.60 bitrate=N/A dup=865 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1848 fps= 15 q=18.0 size=N/A time=00:02:03.20 bitrate=N/A dup=869 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 1852 fps= 15 q=17.0 size=N/A time=00:02:03.46 bitrate=N/A dup=871 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 8 times
+frame= 1872 fps= 15 q=20.0 size=N/A time=00:02:04.80 bitrate=N/A dup=880 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 1884 fps= 15 q=18.0 size=N/A time=00:02:05.60 bitrate=N/A dup=886 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 1891 fps= 15 q=18.0 size=N/A time=00:02:06.06 bitrate=N/A dup=889 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1898 fps= 15 q=18.0 size=N/A time=00:02:06.60 bitrate=N/A dup=893 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 1906 fps= 15 q=18.0 size=N/A time=00:02:07.06 bitrate=N/A dup=896 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1915 fps= 15 q=20.0 size=N/A time=00:02:07.66 bitrate=N/A dup=900 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1922 fps= 15 q=18.0 size=N/A time=00:02:08.20 bitrate=N/A dup=904 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 1930 fps= 15 q=20.0 size=N/A time=00:02:08.66 bitrate=N/A dup=907 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1940 fps= 15 q=17.0 size=N/A time=00:02:09.33 bitrate=N/A dup=912 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 1945 fps= 15 q=19.0 size=N/A time=00:02:09.66 bitrate=N/A dup=914 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 9 times
+frame= 1966 fps= 15 q=17.0 size=N/A time=00:02:11.06 bitrate=N/A dup=924 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 1975 fps= 15 q=19.0 size=N/A time=00:02:11.66 bitrate=N/A dup=928 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 1986 fps= 15 q=17.0 size=N/A time=00:02:12.33 bitrate=N/A dup=933 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 1991 fps= 15 q=22.0 size=N/A time=00:02:12.80 bitrate=N/A dup=936 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream3017.ts' for writing
+[AVIOContext @ 0x70d534041040] Statistics: 9523140 bytes written, 0 seeks, 37 writeouts
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:5
+[AVIOContext @ 0x70d534041040] Statistics: 173 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 2004 fps= 15 q=17.0 size=N/A time=00:02:13.60 bitrate=N/A dup=942 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2011 fps= 15 q=18.0 size=N/A time=00:02:14.06 bitrate=N/A dup=945 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2020 fps= 15 q=20.0 size=N/A time=00:02:14.66 bitrate=N/A dup=949 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 2031 fps= 15 q=17.0 size=N/A time=00:02:15.46 bitrate=N/A dup=955 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2039 fps= 15 q=18.0 size=N/A time=00:02:15.93 bitrate=N/A dup=958 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 8 times
+frame= 2058 fps= 15 q=17.0 size=N/A time=00:02:17.20 bitrate=N/A dup=967 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2069 fps= 15 q=17.0 size=N/A time=00:02:17.93 bitrate=N/A dup=972 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2079 fps= 15 q=16.0 size=N/A time=00:02:18.60 bitrate=N/A dup=977 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2086 fps= 15 q=16.0 size=N/A time=00:02:19.06 bitrate=N/A dup=980 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2095 fps= 15 q=18.0 size=N/A time=00:02:19.66 bitrate=N/A dup=984 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2105 fps= 15 q=16.0 size=N/A time=00:02:20.33 bitrate=N/A dup=989 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2112 fps= 15 q=18.0 size=N/A time=00:02:20.80 bitrate=N/A dup=992 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2122 fps= 15 q=17.0 size=N/A time=00:02:21.46 bitrate=N/A dup=997 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2129 fps= 15 q=17.0 size=N/A time=00:02:21.93 bitrate=N/A dup=1000 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+[vost#0:0/libx264 @ 0x5657b20c02c0] More than 1000 frames duplicated
+[vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+frame= 2133 fps= 15 q=16.0 size=N/A time=00:02:22.20 bitrate=N/A dup=1002 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 9 times
+frame= 2154 fps= 15 q=15.0 size=N/A time=00:02:23.60 bitrate=N/A dup=1012 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2161 fps= 15 q=16.0 size=N/A time=00:02:24.06 bitrate=N/A dup=1015 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2169 fps= 15 q=15.0 size=N/A time=00:02:24.60 bitrate=N/A dup=1019 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2176 fps= 15 q=15.0 size=N/A time=00:02:25.06 bitrate=N/A dup=1022 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2185 fps= 15 q=18.0 size=N/A time=00:02:25.66 bitrate=N/A dup=1026 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2193 fps= 15 q=16.0 size=N/A time=00:02:26.20 bitrate=N/A dup=1030 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2205 fps= 15 q=17.0 size=N/A time=00:02:26.93 bitrate=N/A dup=1035 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 2208 fps= 15 q=16.0 size=N/A time=00:02:27.20 bitrate=N/A dup=1037 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 2221 fps= 15 q=15.0 size=N/A time=00:02:28.06 bitrate=N/A dup=1043 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2227 fps= 15 q=16.0 size=N/A time=00:02:28.46 bitrate=N/A dup=1046 drop=0 speed=0.991x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2237 fps= 15 q=16.0 size=N/A time=00:02:29.06 bitrate=N/A dup=1050 drop=0 speed=0.991x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2245 fps= 15 q=19.0 size=N/A time=00:02:29.66 bitrate=N/A dup=1054 drop=0 speed=0.991x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream3018.ts' for writing
+[AVIOContext @ 0x70d534041040] Statistics: 10000096 bytes written, 0 seeks, 39 writeouts
+[vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2251 fps= 15 q=16.0 size=N/A time=00:02:30.46 bitrate=N/A dup=1060 drop=0 speed=0.992x    [hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:6
+[AVIOContext @ 0x70d534041040] Statistics: 173 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2266 fps= 15 q=16.0 size=N/A time=00:02:31.06 bitrate=N/A dup=1064 drop=0 speed=0.992x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2275 fps= 15 q=18.0 size=N/A time=00:02:31.66 bitrate=N/A dup=1068 drop=0 speed=0.993x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 2287 fps= 15 q=16.0 size=N/A time=00:02:32.46 bitrate=N/A dup=1074 drop=0 speed=0.995x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2298 fps= 15 q=16.0 size=N/A time=00:02:33.20 bitrate=N/A dup=1079 drop=0 speed=0.995x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2307 fps= 15 q=17.0 size=N/A time=00:02:33.80 bitrate=N/A dup=1083 drop=0 speed=0.996x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2317 fps= 15 q=16.0 size=N/A time=00:02:34.46 bitrate=N/A dup=1088 drop=0 speed=0.997x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+frame= 2320 fps= 15 q=18.0 size=N/A time=00:02:34.66 bitrate=N/A dup=1089 drop=0 speed=0.991x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 8 times
+frame= 2339 fps= 15 q=17.0 size=N/A time=00:02:35.93 bitrate=N/A dup=1098 drop=0 speed=0.996x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 11 times
+frame= 2365 fps= 15 q=18.0 size=N/A time=00:02:37.66 bitrate=N/A dup=1110 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 2377 fps= 15 q=16.0 size=N/A time=00:02:38.46 bitrate=N/A dup=1116 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2384 fps= 15 q=16.0 size=N/A time=00:02:38.93 bitrate=N/A dup=1119 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2392 fps= 15 q=16.0 size=N/A time=00:02:39.46 bitrate=N/A dup=1123 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2403 fps= 15 q=16.0 size=N/A time=00:02:40.20 bitrate=N/A dup=1128 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2410 fps= 15 q=18.0 size=N/A time=00:02:40.66 bitrate=N/A dup=1131 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 2414 fps= 15 q=16.0 size=N/A time=00:02:40.93 bitrate=N/A dup=1133 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 6 times
+frame= 2430 fps= 15 q=20.0 size=N/A time=00:02:41.93 bitrate=N/A dup=1140 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2437 fps= 15 q=16.0 size=N/A time=00:02:42.46 bitrate=N/A dup=1144 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2446 fps= 15 q=16.0 size=N/A time=00:02:43.06 bitrate=N/A dup=1148 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2455 fps= 15 q=19.0 size=N/A time=00:02:43.66 bitrate=N/A dup=1152 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2466 fps= 15 q=16.0 size=N/A time=00:02:44.33 bitrate=N/A dup=1157 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2472 fps= 15 q=18.0 size=N/A time=00:02:44.80 bitrate=N/A dup=1160 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2478 fps= 15 q=17.0 size=N/A time=00:02:45.20 bitrate=N/A dup=1163 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2489 fps= 15 q=15.0 size=N/A time=00:02:45.93 bitrate=N/A dup=1168 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2497 fps= 15 q=17.0 size=N/A time=00:02:46.46 bitrate=N/A dup=1172 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream3019.ts' for writing
+[AVIOContext @ 0x70d534041040] Statistics: 10029424 bytes written, 0 seeks, 39 writeouts
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:7
+[AVIOContext @ 0x70d534041040] Statistics: 173 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2506 fps= 15 q=17.0 size=N/A time=00:02:47.06 bitrate=N/A dup=1176 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+frame= 2508 fps= 15 q=17.0 size=N/A time=00:02:47.20 bitrate=N/A dup=1177 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 7 times
+frame= 2525 fps= 15 q=17.0 size=N/A time=00:02:48.33 bitrate=N/A dup=1185 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2534 fps= 15 q=17.0 size=N/A time=00:02:48.93 bitrate=N/A dup=1189 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2544 fps= 15 q=16.0 size=N/A time=00:02:49.60 bitrate=N/A dup=1194 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2553 fps= 15 q=17.0 size=N/A time=00:02:50.20 bitrate=N/A dup=1198 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2560 fps= 15 q=19.0 size=N/A time=00:02:50.66 bitrate=N/A dup=1201 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2570 fps= 15 q=16.0 size=N/A time=00:02:51.33 bitrate=N/A dup=1206 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2576 fps= 15 q=18.0 size=N/A time=00:02:51.80 bitrate=N/A dup=1209 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2587 fps= 15 q=17.0 size=N/A time=00:02:52.46 bitrate=N/A dup=1214 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2596 fps= 15 q=16.0 size=N/A time=00:02:53.06 bitrate=N/A dup=1218 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2602 fps= 15 q=17.0 size=N/A time=00:02:53.46 bitrate=N/A dup=1221 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 6 times
+frame= 2617 fps= 15 q=20.0 size=N/A time=00:02:54.46 bitrate=N/A dup=1228 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2623 fps= 15 q=17.0 size=N/A time=00:02:54.93 bitrate=N/A dup=1231 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2635 fps= 15 q=19.0 size=N/A time=00:02:55.66 bitrate=N/A dup=1236 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 2647 fps= 15 q=17.0 size=N/A time=00:02:56.46 bitrate=N/A dup=1242 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2654 fps= 15 q=18.0 size=N/A time=00:02:56.93 bitrate=N/A dup=1245 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2663 fps= 15 q=16.0 size=N/A time=00:02:57.60 bitrate=N/A dup=1250 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2670 fps= 15 q=17.0 size=N/A time=00:02:58.06 bitrate=N/A dup=1253 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2679 fps= 15 q=16.0 size=N/A time=00:02:58.60 bitrate=N/A dup=1257 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2690 fps= 15 q=16.0 size=N/A time=00:02:59.33 bitrate=N/A dup=1262 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 2695 fps= 15 q=18.0 size=N/A time=00:02:59.66 bitrate=N/A dup=1264 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 9 times
+frame= 2715 fps= 15 q=16.0 size=N/A time=00:03:01.06 bitrate=N/A dup=1274 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2725 fps= 15 q=18.0 size=N/A time=00:03:01.66 bitrate=N/A dup=1278 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2735 fps= 15 q=16.0 size=N/A time=00:03:02.33 bitrate=N/A dup=1283 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2742 fps= 15 q=22.0 size=N/A time=00:03:02.80 bitrate=N/A dup=1286 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream30110.ts' for writing
+[AVIOContext @ 0x70d534041040] Statistics: 9747988 bytes written, 0 seeks, 38 writeouts
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:8
+[AVIOContext @ 0x70d534041040] Statistics: 174 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+frame= 2752 fps= 15 q=16.0 size=N/A time=00:03:03.46 bitrate=N/A dup=1291 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2761 fps= 15 q=16.0 size=N/A time=00:03:04.06 bitrate=N/A dup=1295 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2769 fps= 15 q=16.0 size=N/A time=00:03:04.60 bitrate=N/A dup=1299 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2780 fps= 15 q=16.0 size=N/A time=00:03:05.33 bitrate=N/A dup=1304 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 2785 fps= 15 q=19.0 size=N/A time=00:03:05.66 bitrate=N/A dup=1306 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 2789 fps= 15 q=17.0 size=N/A time=00:03:05.93 bitrate=N/A dup=1308 drop=0 speed=0.995x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 11 times
+frame= 2815 fps= 15 q=18.0 size=N/A time=00:03:07.66 bitrate=N/A dup=1320 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 2827 fps= 15 q=17.0 size=N/A time=00:03:08.46 bitrate=N/A dup=1326 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 2839 fps= 15 q=16.0 size=N/A time=00:03:09.33 bitrate=N/A dup=1332 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2849 fps= 15 q=17.0 size=N/A time=00:03:09.93 bitrate=N/A dup=1336 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2860 fps= 15 q=18.0 size=N/A time=00:03:10.66 bitrate=N/A dup=1341 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2870 fps= 15 q=16.0 size=N/A time=00:03:11.33 bitrate=N/A dup=1346 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2879 fps= 15 q=18.0 size=N/A time=00:03:11.93 bitrate=N/A dup=1350 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 2883 fps= 15 q=17.0 size=N/A time=00:03:12.20 bitrate=N/A dup=1352 drop=0 speed=0.998x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 8 times
+frame= 2902 fps= 15 q=17.0 size=N/A time=00:03:13.46 bitrate=N/A dup=1361 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 7 times
+frame= 2919 fps= 15 q=16.0 size=N/A time=00:03:14.60 bitrate=N/A dup=1369 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2926 fps= 15 q=16.0 size=N/A time=00:03:15.06 bitrate=N/A dup=1372 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2934 fps= 15 q=16.0 size=N/A time=00:03:15.60 bitrate=N/A dup=1376 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2941 fps= 15 q=17.0 size=N/A time=00:03:16.06 bitrate=N/A dup=1379 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 2950 fps= 15 q=19.0 size=N/A time=00:03:16.66 bitrate=N/A dup=1383 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2960 fps= 15 q=17.0 size=N/A time=00:03:17.33 bitrate=N/A dup=1388 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 2971 fps= 15 q=17.0 size=N/A time=00:03:18.06 bitrate=N/A dup=1393 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 2978 fps= 15 q=18.0 size=N/A time=00:03:18.46 bitrate=N/A dup=1396 drop=0 speed=0.998x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 9 times
+frame= 2999 fps= 15 q=19.0 size=N/A time=00:03:19.93 bitrate=N/A dup=1406 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream30111.ts' for writing
+[AVIOContext @ 0x70d534041040] Statistics: 9017608 bytes written, 0 seeks, 35 writeouts
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:9
+[AVIOContext @ 0x70d534041040] Statistics: 175 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3013 fps= 15 q=21.0 size=N/A time=00:03:20.80 bitrate=N/A dup=1412 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 3024 fps= 15 q=19.0 size=N/A time=00:03:21.60 bitrate=N/A dup=1418 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 3030 fps= 15 q=21.0 size=N/A time=00:03:21.93 bitrate=N/A dup=1420 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3040 fps= 15 q=22.0 size=N/A time=00:03:22.66 bitrate=N/A dup=1425 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3048 fps= 15 q=20.0 size=N/A time=00:03:23.20 bitrate=N/A dup=1429 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 3055 fps= 15 q=23.0 size=N/A time=00:03:23.66 bitrate=N/A dup=1432 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3065 fps= 15 q=20.0 size=N/A time=00:03:24.33 bitrate=N/A dup=1437 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 3070 fps= 15 q=22.0 size=N/A time=00:03:24.66 bitrate=N/A dup=1439 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 3082 fps= 15 q=20.0 size=N/A time=00:03:25.46 bitrate=N/A dup=1445 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 7 times
+frame= 3100 fps= 15 q=21.0 size=N/A time=00:03:26.66 bitrate=N/A dup=1453 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3108 fps= 15 q=18.0 size=N/A time=00:03:27.20 bitrate=N/A dup=1457 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3117 fps= 15 q=20.0 size=N/A time=00:03:27.80 bitrate=N/A dup=1461 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 3123 fps= 15 q=18.0 size=N/A time=00:03:28.20 bitrate=N/A dup=1464 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3132 fps= 15 q=20.0 size=N/A time=00:03:28.80 bitrate=N/A dup=1468 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3142 fps= 15 q=18.0 size=N/A time=00:03:29.46 bitrate=N/A dup=1473 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3153 fps= 15 q=18.0 size=N/A time=00:03:30.20 bitrate=N/A dup=1478 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3162 fps= 15 q=19.0 size=N/A time=00:03:30.80 bitrate=N/A dup=1482 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+frame= 3163 fps= 15 q=18.0 size=N/A time=00:03:30.93 bitrate=N/A dup=1483 drop=0 speed=0.994x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 3177 fps= 15 q=19.0 size=N/A time=00:03:31.80 bitrate=N/A dup=1489 drop=0 speed=0.996x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 6 times
+frame= 3192 fps= 15 q=18.0 size=N/A time=00:03:32.80 bitrate=N/A dup=1496 drop=0 speed=0.998x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 7 times
+frame= 3209 fps= 15 q=17.0 size=N/A time=00:03:33.93 bitrate=N/A dup=1504 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 3222 fps= 15 q=18.0 size=N/A time=00:03:34.80 bitrate=N/A dup=1510 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 3233 fps= 15 q=16.0 size=N/A time=00:03:35.60 bitrate=N/A dup=1516 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 3247 fps= 15 q=17.0 size=N/A time=00:03:36.46 bitrate=N/A dup=1522 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream30112.ts' for writing
+[AVIOContext @ 0x70d534041040] Statistics: 11100272 bytes written, 0 seeks, 43 writeouts
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:10
+[AVIOContext @ 0x70d534041040] Statistics: 177 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 3256 fps= 15 q=16.0 size=N/A time=00:03:37.06 bitrate=N/A dup=1526 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+frame= 3258 fps= 15 q=16.0 size=N/A time=00:03:37.20 bitrate=N/A dup=1527 drop=0 speed=0.998x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 10 times
+frame= 3282 fps= 15 q=18.0 size=N/A time=00:03:38.80 bitrate=N/A dup=1538 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 3294 fps= 15 q=15.0 size=N/A time=00:03:39.60 bitrate=N/A dup=1544 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 3301 fps= 15 q=16.0 size=N/A time=00:03:40.06 bitrate=N/A dup=1547 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3310 fps= 15 q=19.0 size=N/A time=00:03:40.66 bitrate=N/A dup=1551 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3318 fps= 15 q=17.0 size=N/A time=00:03:41.20 bitrate=N/A dup=1555 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 3325 fps= 15 q=19.0 size=N/A time=00:03:41.66 bitrate=N/A dup=1558 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3334 fps= 15 q=17.0 size=N/A time=00:03:42.20 bitrate=N/A dup=1562 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3342 fps= 15 q=18.0 size=N/A time=00:03:42.80 bitrate=N/A dup=1566 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3350 fps= 15 q=16.0 size=N/A time=00:03:43.33 bitrate=N/A dup=1570 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+frame= 3352 fps= 15 q=16.0 size=N/A time=00:03:43.46 bitrate=N/A dup=1571 drop=0 speed=0.999x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 8 times
+frame= 3372 fps= 15 q=18.0 size=N/A time=00:03:44.80 bitrate=N/A dup=1580 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 3386 fps= 15 q=18.0 size=N/A time=00:03:45.66 bitrate=N/A dup=1586 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3395 fps= 15 q=16.0 size=N/A time=00:03:46.33 bitrate=N/A dup=1591 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 3402 fps= 15 q=18.0 size=N/A time=00:03:46.80 bitrate=N/A dup=1594 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3413 fps= 15 q=16.0 size=N/A time=00:03:47.46 bitrate=N/A dup=1599 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3421 fps= 15 q=16.0 size=N/A time=00:03:48.06 bitrate=N/A dup=1603 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3430 fps= 15 q=18.0 size=N/A time=00:03:48.66 bitrate=N/A dup=1607 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 3442 fps= 15 q=16.0 size=N/A time=00:03:49.46 bitrate=N/A dup=1613 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+frame= 3445 fps= 15 q=18.0 size=N/A time=00:03:49.66 bitrate=N/A dup=1614 drop=0 speed=0.997x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 7 times
+frame= 3462 fps= 15 q=19.0 size=N/A time=00:03:50.80 bitrate=N/A dup=1622 drop=0 speed=0.999x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 7 times
+frame= 3478 fps= 15 q=16.0 size=N/A time=00:03:51.93 bitrate=N/A dup=1630 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 3492 fps= 15 q=22.0 size=N/A time=00:03:52.80 bitrate=N/A dup=1636 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream30113.ts' for writing
+[AVIOContext @ 0x70d534041040] Statistics: 10173808 bytes written, 0 seeks, 39 writeouts
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:11
+[AVIOContext @ 0x70d534041040] Statistics: 177 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 3504 fps= 15 q=15.0 size=N/A time=00:03:53.60 bitrate=N/A dup=1642 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 3510 fps= 15 q=16.0 size=N/A time=00:03:54.06 bitrate=N/A dup=1645 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3522 fps= 15 q=18.0 size=N/A time=00:03:54.80 bitrate=N/A dup=1650 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3530 fps= 15 q=16.0 size=N/A time=00:03:55.33 bitrate=N/A dup=1654 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 3536 fps= 15 q=18.0 size=N/A time=00:03:55.80 bitrate=N/A dup=1657 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+frame= 3539 fps= 15 q=16.0 size=N/A time=00:03:55.93 bitrate=N/A dup=1658 drop=0 speed=0.998x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 10 times
+frame= 3562 fps= 15 q=16.0 size=N/A time=00:03:57.46 bitrate=N/A dup=1669 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 7 times
+frame= 3579 fps= 15 q=16.0 size=N/A time=00:03:58.60 bitrate=N/A dup=1677 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 3586 fps= 15 q=16.0 size=N/A time=00:03:59.06 bitrate=N/A dup=1680 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3595 fps= 15 q=19.0 size=N/A time=00:03:59.66 bitrate=N/A dup=1684 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3605 fps= 15 q=16.0 size=N/A time=00:04:00.33 bitrate=N/A dup=1689 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 3612 fps= 15 q=19.0 size=N/A time=00:04:00.80 bitrate=N/A dup=1692 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 3624 fps= 15 q=16.0 size=N/A time=00:04:01.60 bitrate=N/A dup=1698 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 3629 fps= 15 q=17.0 size=N/A time=00:04:01.93 bitrate=N/A dup=1700 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 3633 fps= 15 q=16.0 size=N/A time=00:04:02.20 bitrate=N/A dup=1702 drop=0 speed=0.999x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 11 times
+frame= 3660 fps= 15 q=16.0 size=N/A time=00:04:03.93 bitrate=N/A dup=1714 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3670 fps= 15 q=18.0 size=N/A time=00:04:04.66 bitrate=N/A dup=1719 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3680 fps= 15 q=16.0 size=N/A time=00:04:05.33 bitrate=N/A dup=1724 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 3686 fps= 15 q=18.0 size=N/A time=00:04:05.80 bitrate=N/A dup=1727 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3696 fps= 15 q=16.0 size=N/A time=00:04:06.46 bitrate=N/A dup=1732 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 3704 fps= 15 q=17.0 size=N/A time=00:04:06.93 bitrate=N/A dup=1735 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3715 fps= 15 q=16.0 size=N/A time=00:04:07.60 bitrate=N/A dup=1740 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 3719 fps= 15 q=17.0 size=N/A time=00:04:07.93 bitrate=N/A dup=1742 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3727 fps= 15 q=16.0 size=N/A time=00:04:08.46 bitrate=N/A dup=1746 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 9 times
+frame= 3749 fps= 15 q=17.0 size=N/A time=00:04:09.93 bitrate=N/A dup=1756 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream30114.ts' for writing
+[AVIOContext @ 0x70d534041040] Statistics: 9656620 bytes written, 0 seeks, 37 writeouts
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:12
+[AVIOContext @ 0x70d534041040] Statistics: 177 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3759 fps= 15 q=16.0 size=N/A time=00:04:10.60 bitrate=N/A dup=1761 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 3764 fps= 15 q=17.0 size=N/A time=00:04:10.93 bitrate=N/A dup=1763 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3775 fps= 15 q=18.0 size=N/A time=00:04:11.66 bitrate=N/A dup=1768 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3785 fps= 15 q=16.0 size=N/A time=00:04:12.33 bitrate=N/A dup=1773 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 3792 fps= 15 q=18.0 size=N/A time=00:04:12.80 bitrate=N/A dup=1776 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3800 fps= 15 q=16.0 size=N/A time=00:04:13.33 bitrate=N/A dup=1780 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3809 fps= 15 q=17.0 size=N/A time=00:04:13.93 bitrate=N/A dup=1784 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3819 fps= 15 q=16.0 size=N/A time=00:04:14.60 bitrate=N/A dup=1789 drop=0 speed=   1x    frame= 3820 fps= 15 q=19.0 size=N/A time=00:04:14.66 bitrate=N/A dup=1789 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 9 times
+frame= 3841 fps= 15 q=17.0 size=N/A time=00:04:16.06 bitrate=N/A dup=1799 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3850 fps= 15 q=20.0 size=N/A time=00:04:16.66 bitrate=N/A dup=1803 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3860 fps= 15 q=18.0 size=N/A time=00:04:17.33 bitrate=N/A dup=1808 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3869 fps= 15 q=18.0 size=N/A time=00:04:17.93 bitrate=N/A dup=1812 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3880 fps= 15 q=20.0 size=N/A time=00:04:18.66 bitrate=N/A dup=1817 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3891 fps= 15 q=17.0 size=N/A time=00:04:19.33 bitrate=N/A dup=1822 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 3897 fps= 15 q=20.0 size=N/A time=00:04:19.80 bitrate=N/A dup=1825 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3907 fps= 15 q=17.0 size=N/A time=00:04:20.46 bitrate=N/A dup=1830 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 3914 fps= 15 q=18.0 size=N/A time=00:04:20.93 bitrate=N/A dup=1833 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 9 times
+frame= 3936 fps= 15 q=16.0 size=N/A time=00:04:22.33 bitrate=N/A dup=1843 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 3944 fps= 15 q=18.0 size=N/A time=00:04:22.93 bitrate=N/A dup=1847 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3955 fps= 15 q=19.0 size=N/A time=00:04:23.66 bitrate=N/A dup=1852 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 3967 fps= 15 q=17.0 size=N/A time=00:04:24.46 bitrate=N/A dup=1858 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 3974 fps= 15 q=18.0 size=N/A time=00:04:24.93 bitrate=N/A dup=1861 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 3984 fps= 15 q=18.0 size=N/A time=00:04:25.60 bitrate=N/A dup=1866 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 3991 fps= 15 q=23.0 size=N/A time=00:04:26.06 bitrate=N/A dup=1869 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 4000 fps= 15 q=20.0 size=N/A time=00:04:26.66 bitrate=N/A dup=1873 drop=0 speed=   1x    [hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream30115.ts' for writing
+[AVIOContext @ 0x70d534041040] Statistics: 9465988 bytes written, 0 seeks, 37 writeouts
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:13
+[AVIOContext @ 0x70d534041040] Statistics: 177 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 4008 fps= 15 q=17.0 size=N/A time=00:04:27.20 bitrate=N/A dup=1877 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 9 times
+frame= 4029 fps= 15 q=17.0 size=N/A time=00:04:28.60 bitrate=N/A dup=1887 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 4036 fps= 15 q=17.0 size=N/A time=00:04:29.06 bitrate=N/A dup=1890 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 4045 fps= 15 q=19.0 size=N/A time=00:04:29.66 bitrate=N/A dup=1894 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 4055 fps= 15 q=16.0 size=N/A time=00:04:30.33 bitrate=N/A dup=1899 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 4062 fps= 15 q=18.0 size=N/A time=00:04:30.80 bitrate=N/A dup=1902 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 4072 fps= 15 q=17.0 size=N/A time=00:04:31.46 bitrate=N/A dup=1907 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 4077 fps= 15 q=18.0 size=N/A time=00:04:31.80 bitrate=N/A dup=1909 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 4089 fps= 15 q=16.0 size=N/A time=00:04:32.60 bitrate=N/A dup=1915 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 4096 fps= 15 q=16.0 size=N/A time=00:04:33.06 bitrate=N/A dup=1918 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 4102 fps= 15 q=16.0 size=N/A time=00:04:33.46 bitrate=N/A dup=1921 drop=0 speed=0.999x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 7 times
+frame= 4120 fps= 15 q=19.0 size=N/A time=00:04:34.66 bitrate=N/A dup=1929 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 6 times
+frame= 4135 fps= 15 q=19.0 size=N/A time=00:04:35.66 bitrate=N/A dup=1936 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 4143 fps= 15 q=16.0 size=N/A time=00:04:36.20 bitrate=N/A dup=1940 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 4152 fps= 15 q=18.0 size=N/A time=00:04:36.80 bitrate=N/A dup=1944 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 4162 fps= 15 q=17.0 size=N/A time=00:04:37.46 bitrate=N/A dup=1949 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 4171 fps= 15 q=17.0 size=N/A time=00:04:38.06 bitrate=N/A dup=1953 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 4179 fps= 15 q=17.0 size=N/A time=00:04:38.60 bitrate=N/A dup=1957 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 4190 fps= 15 q=17.0 size=N/A time=00:04:39.33 bitrate=N/A dup=1962 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 4195 fps= 15 q=19.0 size=N/A time=00:04:39.66 bitrate=N/A dup=1964 drop=0 speed=0.999x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 4207 fps= 15 q=17.0 size=N/A time=00:04:40.46 bitrate=N/A dup=1970 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 4218 fps= 15 q=17.0 size=N/A time=00:04:41.20 bitrate=N/A dup=1975 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 4231 fps= 15 q=17.0 size=N/A time=00:04:42.06 bitrate=N/A dup=1981 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 4244 fps= 15 q=19.0 size=N/A time=00:04:42.93 bitrate=N/A dup=1987 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream30116.ts' for writing
+[AVIOContext @ 0x70d534041040] Statistics: 9598528 bytes written, 0 seeks, 37 writeouts
+[hls @ 0x5657b2255bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:14
+[AVIOContext @ 0x70d534041040] Statistics: 177 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 4255 fps= 15 q=19.0 size=N/A time=00:04:43.66 bitrate=N/A dup=1992 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 4261 fps= 15 q=17.0 size=N/A time=00:04:44.06 bitrate=N/A dup=1995 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 4269 fps= 15 q=17.0 size=N/A time=00:04:44.60 bitrate=N/A dup=1999 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 4278 fps= 15 q=18.0 size=N/A time=00:04:45.20 bitrate=N/A dup=2003 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 2 times
+frame= 4285 fps= 15 q=20.0 size=N/A time=00:04:45.66 bitrate=N/A dup=2006 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 4288 fps= 15 q=18.0 size=N/A time=00:04:45.93 bitrate=N/A dup=2008 drop=0 speed=0.996x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 4301 fps= 15 q=19.0 size=N/A time=00:04:46.80 bitrate=N/A dup=2014 drop=0 speed=0.997x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 4315 fps= 15 q=19.0 size=N/A time=00:04:47.66 bitrate=N/A dup=2020 drop=0 speed=0.997x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 4327 fps= 15 q=17.0 size=N/A time=00:04:48.46 bitrate=N/A dup=2026 drop=0 speed=0.998x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 4336 fps= 15 q=17.0 size=N/A time=00:04:49.06 bitrate=N/A dup=2030 drop=0 speed=0.998x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 4349 fps= 15 q=18.0 size=N/A time=00:04:49.93 bitrate=N/A dup=2036 drop=0 speed=0.999x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 4360 fps= 15 q=19.0 size=N/A time=00:04:50.66 bitrate=N/A dup=2041 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 4370 fps= 15 q=17.0 size=N/A time=00:04:51.33 bitrate=N/A dup=2046 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 1 times
+frame= 4373 fps= 15 q=17.0 size=N/A time=00:04:51.60 bitrate=N/A dup=2048 drop=0 speed=0.999x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 4383 fps= 15 q=17.0 size=N/A time=00:04:52.20 bitrate=N/A dup=2052 drop=0 speed=0.995x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 4396 fps= 15 q=17.0 size=N/A time=00:04:53.06 bitrate=N/A dup=2058 drop=0 speed=0.996x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 4407 fps= 15 q=19.0 size=N/A time=00:04:53.80 bitrate=N/A dup=2063 drop=0 speed=0.996x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 5 times
+frame= 4420 fps= 15 q=19.0 size=N/A time=00:04:54.66 bitrate=N/A dup=2069 drop=0 speed=0.997x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 4 times
+frame= 4431 fps= 15 q=16.0 size=N/A time=00:04:55.33 bitrate=N/A dup=2074 drop=0 speed=0.997x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+    Last message repeated 3 times
+frame= 4439 fps= 15 q=17.0 size=N/A time=00:04:55.93 bitrate=N/A dup=2078 drop=0 speed=0.997x    [vost#0:0/libx264 @ 0x5657b20c02c0] *** 1 dup!
+ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 13 (Ubuntu 13.2.0-23ubuntu3)
+  configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+[tcp @ 0x56bf2d012540] Starting connection attempt to 10.11.12.21 port 1024
+[tcp @ 0x56bf2d012540] Successfully connected to 10.11.12.21 port 1024
+[rtsp @ 0x56bf2d04c540] SDP:
+v=0
+o=- 1109162014219182 0 IN IP4 0.0.0.0
+s=HIK Media Server V4.32.110
+i=HIK Media Server Session Description : standard
+e=NONE
+c=IN IP4 0.0.0.0
+t=0 0
+a=control:*
+b=AS:1034
+a=range:npt=now-
+m=video 0 RTP/AVP 96
+i=Video Media
+a=rtpmap:96 H265/90000
+a=control:trackID=video
+b=AS:1024
+a=Media_header:MEDIAINFO=494D4B48020100000400050000000000000000000000000000000000000000000000000000000000;
+a=appversion:1.0
+
+[rtsp @ 0x56bf2d04c540] setting jitter buffer size to 0
+[hevc @ 0x56bf2d050900] PPS id out of range: 0
+    Last message repeated 1 times
+[hevc @ 0x56bf2d050900] Error parsing NAL unit #0.
+Input #0, rtsp, from 'rtsp://admin:vct280620@10.11.12.21:1024/Streaming/Channels/301':
+  Metadata:
+    title           : HIK Media Server V4.32.110
+    comment         : HIK Media Server Session Description : standard
+  Duration: N/A, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: hevc (Main), 1 reference frame, yuvj420p(pc, bt709, left), 1280x720, 8 fps, 8 tbr, 90k tbn
+[out#0/hls @ 0x56bf2d079ac0] No explicit maps, mapping streams automatically...
+Multiple -c, -codec, -acodec, -vcodec, -scodec or -dcodec options specified for stream 0, only the last option '-c:v libx264' will be used.
+[vost#0:0/libx264 @ 0x56bf2d085b00] Created video stream from input stream 0:0
+Stream mapping:
+  Stream #0:0 -> #0:0 (hevc (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[hevc @ 0x56bf2d087540] Could not find ref with POC 40
+[graph 0 input from stream 0:0 @ 0x56bf2d175b00] w:1280 h:720 pixfmt:yuvj420p tb:1/90000 fr:8/1 sar:0/1
+[vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+[libx264 @ 0x56bf2d085dc0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0x56bf2d085dc0] profile Constrained Baseline, level 3.1, 4:2:0, 8-bit
+[libx264 @ 0x56bf2d085dc0] 264 - core 164 r3108 31e19f9 - H.264/MPEG-4 AVC codec - Copyleft 2003-2023 - http://www.videolan.org/x264.html - options: cabac=0 ref=1 deblock=0:0:0 analyse=0:0 me=dia subme=0 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=0 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=0 weightp=0 keyint=250 keyint_min=15 scenecut=0 intra_refresh=0 rc=crf mbtree=0 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=0
+[mpegts @ 0x56bf2e9e5040] service 1 using PCR in pid=256, pcr_period=0ms
+[mpegts @ 0x56bf2e9e5040] muxrate VBR, sdt every 1073741822000 ms, pat/pmt every 1073741822000 ms
+Output #0, hls, to '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8':
+  Metadata:
+    title           : HIK Media Server V4.32.110
+    comment         : HIK Media Server Session Description : standard
+    encoder         : Lavf60.16.100
+  Stream #0:0: Video: h264, 1 reference frame, yuvj420p(pc, bt709, progressive, left), 1280x720 (0x0), q=2-31, 15 fps, 90k tbn
+    Metadata:
+      encoder         : Lavc60.31.102 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    0 fps=0.0 q=0.0 size=       0kB time=N/A bitrate=N/A dup=1 drop=0 speed=N/A    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 13 times
+frame=   17 fps=0.0 q=16.0 size=N/A time=00:00:01.20 bitrate=N/A dup=15 drop=0 speed=2.27x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=   29 fps= 27 q=17.0 size=N/A time=00:00:01.93 bitrate=N/A dup=20 drop=0 speed=1.77x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=   38 fps= 22 q=16.0 size=N/A time=00:00:02.60 bitrate=N/A dup=25 drop=0 speed= 1.5x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=   48 fps= 21 q=16.0 size=N/A time=00:00:03.20 bitrate=N/A dup=29 drop=0 speed=1.43x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame=   55 fps= 20 q=18.0 size=N/A time=00:00:03.66 bitrate=N/A dup=32 drop=0 speed=1.32x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=   64 fps= 19 q=16.0 size=N/A time=00:00:04.33 bitrate=N/A dup=37 drop=0 speed=1.28x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 1 times
+frame=   70 fps= 16 q=18.0 size=N/A time=00:00:04.66 bitrate=N/A dup=39 drop=0 speed=1.05x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 6 times
+frame=   86 fps= 17 q=22.0 size=N/A time=00:00:05.66 bitrate=N/A dup=46 drop=0 speed=1.14x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame=   97 fps= 17 q=17.0 size=N/A time=00:00:06.46 bitrate=N/A dup=52 drop=0 speed=1.17x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  106 fps= 17 q=16.0 size=N/A time=00:00:07.06 bitrate=N/A dup=56 drop=0 speed=1.16x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  114 fps= 17 q=16.0 size=N/A time=00:00:07.60 bitrate=N/A dup=60 drop=0 speed=1.15x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  123 fps= 17 q=17.0 size=N/A time=00:00:08.20 bitrate=N/A dup=64 drop=0 speed=1.14x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame=  130 fps= 17 q=19.0 size=N/A time=00:00:08.66 bitrate=N/A dup=67 drop=0 speed=1.12x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  138 fps= 17 q=17.0 size=N/A time=00:00:09.20 bitrate=N/A dup=71 drop=0 speed=1.12x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame=  145 fps= 17 q=19.0 size=N/A time=00:00:09.66 bitrate=N/A dup=74 drop=0 speed= 1.1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  155 fps= 17 q=16.0 size=N/A time=00:00:10.33 bitrate=N/A dup=79 drop=0 speed= 1.1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  164 fps= 16 q=17.0 size=N/A time=00:00:10.93 bitrate=N/A dup=83 drop=0 speed=1.07x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  174 fps= 16 q=16.0 size=N/A time=00:00:11.60 bitrate=N/A dup=88 drop=0 speed=1.08x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  183 fps= 16 q=17.0 size=N/A time=00:00:12.20 bitrate=N/A dup=92 drop=0 speed=1.07x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  195 fps= 16 q=17.0 size=N/A time=00:00:12.93 bitrate=N/A dup=97 drop=0 speed=1.07x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  204 fps= 16 q=16.0 size=N/A time=00:00:13.60 bitrate=N/A dup=102 drop=0 speed=1.08x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame=  211 fps= 16 q=16.0 size=N/A time=00:00:14.06 bitrate=N/A dup=105 drop=0 speed=1.07x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  220 fps= 16 q=19.0 size=N/A time=00:00:14.66 bitrate=N/A dup=109 drop=0 speed=1.07x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  230 fps= 16 q=16.0 size=N/A time=00:00:15.33 bitrate=N/A dup=114 drop=0 speed=1.07x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  239 fps= 16 q=15.0 size=N/A time=00:00:15.93 bitrate=N/A dup=118 drop=0 speed=1.06x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  247 fps= 16 q=17.0 size=N/A time=00:00:16.46 bitrate=N/A dup=122 drop=0 speed=1.06x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+[hls @ 0x56bf2d191bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream3010.ts' for writing
+[AVIOContext @ 0x7641c4041040] Statistics: 9726932 bytes written, 0 seeks, 38 writeouts
+[hls @ 0x56bf2d191bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:0
+[AVIOContext @ 0x7641c4041040] Statistics: 107 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame=  256 fps= 16 q=16.0 size=N/A time=00:00:17.06 bitrate=N/A dup=126 drop=0 speed=1.06x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+frame=  258 fps= 15 q=16.0 size=N/A time=00:00:17.20 bitrate=N/A dup=127 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame=  271 fps= 16 q=16.0 size=N/A time=00:00:18.06 bitrate=N/A dup=133 drop=0 speed=1.04x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  283 fps= 16 q=18.0 size=N/A time=00:00:18.80 bitrate=N/A dup=138 drop=0 speed=1.04x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame=  294 fps= 16 q=16.0 size=N/A time=00:00:19.60 bitrate=N/A dup=144 drop=0 speed=1.05x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  303 fps= 16 q=17.0 size=N/A time=00:00:20.20 bitrate=N/A dup=148 drop=0 speed=1.05x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame=  310 fps= 16 q=19.0 size=N/A time=00:00:20.66 bitrate=N/A dup=151 drop=0 speed=1.05x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  320 fps= 16 q=16.0 size=N/A time=00:00:21.33 bitrate=N/A dup=156 drop=0 speed=1.05x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  329 fps= 16 q=17.0 size=N/A time=00:00:21.93 bitrate=N/A dup=160 drop=0 speed=1.05x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  337 fps= 16 q=17.0 size=N/A time=00:00:22.46 bitrate=N/A dup=164 drop=0 speed=1.04x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  346 fps= 16 q=16.0 size=N/A time=00:00:23.06 bitrate=N/A dup=168 drop=0 speed=1.04x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame=  352 fps= 15 q=17.0 size=N/A time=00:00:23.46 bitrate=N/A dup=171 drop=0 speed=0.993x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 7 times
+frame=  371 fps= 15 q=19.0 size=N/A time=00:00:24.66 bitrate=N/A dup=179 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 6 times
+frame=  385 fps= 15 q=19.0 size=N/A time=00:00:25.66 bitrate=N/A dup=186 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  393 fps= 15 q=17.0 size=N/A time=00:00:26.20 bitrate=N/A dup=190 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame=  400 fps= 15 q=19.0 size=N/A time=00:00:26.66 bitrate=N/A dup=193 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  408 fps= 15 q=17.0 size=N/A time=00:00:27.20 bitrate=N/A dup=197 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  420 fps= 16 q=18.0 size=N/A time=00:00:27.93 bitrate=N/A dup=202 drop=0 speed=1.04x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  427 fps= 15 q=17.0 size=N/A time=00:00:28.46 bitrate=N/A dup=206 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  436 fps= 15 q=17.0 size=N/A time=00:00:29.06 bitrate=N/A dup=210 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  446 fps= 15 q=19.0 size=N/A time=00:00:29.66 bitrate=N/A dup=214 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  455 fps= 15 q=17.0 size=N/A time=00:00:30.33 bitrate=N/A dup=219 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 7 times
+frame=  473 fps= 15 q=17.0 size=N/A time=00:00:31.46 bitrate=N/A dup=227 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  483 fps= 15 q=17.0 size=N/A time=00:00:32.20 bitrate=N/A dup=232 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame=  490 fps= 15 q=26.0 size=N/A time=00:00:32.66 bitrate=N/A dup=235 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  500 fps= 15 q=16.0 size=N/A time=00:00:33.33 bitrate=N/A dup=240 drop=0 speed=1.03x    [hls @ 0x56bf2d191bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream3011.ts' for writing
+[AVIOContext @ 0x7641c4041040] Statistics: 9583488 bytes written, 0 seeks, 37 writeouts
+[hls @ 0x56bf2d191bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:0
+[AVIOContext @ 0x7641c4041040] Statistics: 140 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame=  508 fps= 15 q=19.0 size=N/A time=00:00:33.80 bitrate=N/A dup=243 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  515 fps= 15 q=16.0 size=N/A time=00:00:34.33 bitrate=N/A dup=247 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  524 fps= 15 q=17.0 size=N/A time=00:00:34.93 bitrate=N/A dup=251 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  534 fps= 15 q=16.0 size=N/A time=00:00:35.60 bitrate=N/A dup=256 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 1 times
+frame=  539 fps= 15 q=17.0 size=N/A time=00:00:35.93 bitrate=N/A dup=258 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame=  552 fps= 15 q=18.0 size=N/A time=00:00:36.80 bitrate=N/A dup=264 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 6 times
+frame=  568 fps= 15 q=18.0 size=N/A time=00:00:37.80 bitrate=N/A dup=271 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame=  579 fps= 15 q=16.0 size=N/A time=00:00:38.60 bitrate=N/A dup=277 drop=0 speed=1.03x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame=  586 fps= 15 q=16.0 size=N/A time=00:00:39.06 bitrate=N/A dup=280 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  594 fps= 15 q=16.0 size=N/A time=00:00:39.60 bitrate=N/A dup=284 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  603 fps= 15 q=16.0 size=N/A time=00:00:40.20 bitrate=N/A dup=288 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  612 fps= 15 q=18.0 size=N/A time=00:00:40.80 bitrate=N/A dup=292 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  620 fps= 15 q=16.0 size=N/A time=00:00:41.33 bitrate=N/A dup=296 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  629 fps= 15 q=18.0 size=N/A time=00:00:41.93 bitrate=N/A dup=300 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 1 times
+frame=  633 fps= 15 q=17.0 size=N/A time=00:00:42.20 bitrate=N/A dup=302 drop=0 speed=0.995x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 6 times
+frame=  647 fps= 15 q=20.0 size=N/A time=00:00:43.20 bitrate=N/A dup=309 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 8 times
+frame=  667 fps= 15 q=17.0 size=N/A time=00:00:44.46 bitrate=N/A dup=318 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  676 fps= 15 q=16.0 size=N/A time=00:00:45.06 bitrate=N/A dup=322 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  684 fps= 15 q=16.0 size=N/A time=00:00:45.60 bitrate=N/A dup=326 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  693 fps= 15 q=17.0 size=N/A time=00:00:46.20 bitrate=N/A dup=330 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame=  700 fps= 15 q=20.0 size=N/A time=00:00:46.66 bitrate=N/A dup=333 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  709 fps= 15 q=17.0 size=N/A time=00:00:47.33 bitrate=N/A dup=338 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  718 fps= 15 q=18.0 size=N/A time=00:00:47.93 bitrate=N/A dup=342 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  728 fps= 15 q=17.0 size=N/A time=00:00:48.46 bitrate=N/A dup=346 drop=0 speed=0.989x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  738 fps= 15 q=17.0 size=N/A time=00:00:49.20 bitrate=N/A dup=351 drop=0 speed=0.993x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+[hls @ 0x56bf2d191bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream3012.ts' for writing
+[AVIOContext @ 0x7641c4041040] Statistics: 9234936 bytes written, 0 seeks, 36 writeouts
+[hls @ 0x56bf2d191bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:0
+[AVIOContext @ 0x7641c4041040] Statistics: 173 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 1 times
+frame=  755 fps= 15 q=17.0 size=N/A time=00:00:50.33 bitrate=N/A dup=359 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 6 times
+frame=  771 fps= 15 q=17.0 size=N/A time=00:00:51.33 bitrate=N/A dup=366 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  781 fps= 15 q=17.0 size=N/A time=00:00:52.06 bitrate=N/A dup=371 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  789 fps= 15 q=17.0 size=N/A time=00:00:52.60 bitrate=N/A dup=375 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  798 fps= 15 q=17.0 size=N/A time=00:00:53.20 bitrate=N/A dup=379 drop=0 speed=1.02x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame=  805 fps= 15 q=19.0 size=N/A time=00:00:53.66 bitrate=N/A dup=382 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  815 fps= 15 q=16.0 size=N/A time=00:00:54.33 bitrate=N/A dup=387 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 1 times
+frame=  820 fps= 15 q=19.0 size=N/A time=00:00:54.66 bitrate=N/A dup=389 drop=0 speed=0.986x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 6 times
+frame=  835 fps= 15 q=22.0 size=N/A time=00:00:55.66 bitrate=N/A dup=396 drop=0 speed=0.995x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 6 times
+frame=  849 fps= 15 q=16.0 size=N/A time=00:00:56.60 bitrate=N/A dup=403 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  860 fps= 15 q=16.0 size=N/A time=00:00:57.33 bitrate=N/A dup=408 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  870 fps= 15 q=16.0 size=N/A time=00:00:58.06 bitrate=N/A dup=413 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  881 fps= 15 q=18.0 size=N/A time=00:00:58.80 bitrate=N/A dup=418 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  892 fps= 15 q=17.0 size=N/A time=00:00:59.46 bitrate=N/A dup=423 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame=  899 fps= 15 q=17.0 size=N/A time=00:00:59.93 bitrate=N/A dup=426 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame=  912 fps= 15 q=18.0 size=N/A time=00:01:00.80 bitrate=N/A dup=432 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+frame=  914 fps= 15 q=17.0 size=N/A time=00:01:00.93 bitrate=N/A dup=433 drop=0 speed=0.989x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 7 times
+frame=  931 fps= 15 q=17.0 size=N/A time=00:01:02.06 bitrate=N/A dup=441 drop=0 speed=0.998x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame=  944 fps= 15 q=17.0 size=N/A time=00:01:02.93 bitrate=N/A dup=447 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 6 times
+frame=  959 fps= 15 q=17.0 size=N/A time=00:01:03.93 bitrate=N/A dup=454 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame=  970 fps= 15 q=19.0 size=N/A time=00:01:04.66 bitrate=N/A dup=459 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame=  978 fps= 15 q=17.0 size=N/A time=00:01:05.20 bitrate=N/A dup=463 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame=  984 fps= 15 q=17.0 size=N/A time=00:01:05.60 bitrate=N/A dup=466 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 1 times
+frame=  989 fps= 15 q=15.0 size=N/A time=00:01:05.93 bitrate=N/A dup=468 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+[hls @ 0x56bf2d191bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream3013.ts' for writing
+[AVIOContext @ 0x7641c4041040] Statistics: 10042020 bytes written, 0 seeks, 39 writeouts
+[hls @ 0x56bf2d191bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:1
+[AVIOContext @ 0x7641c4041040] Statistics: 173 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+frame= 1001 fps= 15 q=18.0 size=N/A time=00:01:06.80 bitrate=N/A dup=474 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 1009 fps= 15 q=17.0 size=N/A time=00:01:07.20 bitrate=N/A dup=477 drop=0 speed=0.987x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame= 1022 fps= 15 q=16.0 size=N/A time=00:01:08.06 bitrate=N/A dup=483 drop=0 speed=0.992x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame= 1035 fps= 15 q=17.0 size=N/A time=00:01:08.93 bitrate=N/A dup=489 drop=0 speed=0.997x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame= 1048 fps= 15 q=19.0 size=N/A time=00:01:09.80 bitrate=N/A dup=495 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame= 1060 fps= 15 q=19.0 size=N/A time=00:01:10.66 bitrate=N/A dup=501 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 6 times
+frame= 1074 fps= 15 q=16.0 size=N/A time=00:01:11.60 bitrate=N/A dup=508 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 1085 fps= 15 q=16.0 size=N/A time=00:01:12.33 bitrate=N/A dup=513 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 1096 fps= 15 q=16.0 size=N/A time=00:01:13.06 bitrate=N/A dup=518 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 1102 fps= 15 q=16.0 size=N/A time=00:01:13.46 bitrate=N/A dup=521 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 6 times
+frame= 1117 fps= 15 q=20.0 size=N/A time=00:01:14.46 bitrate=N/A dup=528 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 6 times
+frame= 1132 fps= 15 q=17.0 size=N/A time=00:01:15.46 bitrate=N/A dup=535 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1141 fps= 15 q=17.0 size=N/A time=00:01:16.06 bitrate=N/A dup=539 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1149 fps= 15 q=17.0 size=N/A time=00:01:16.60 bitrate=N/A dup=543 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1158 fps= 15 q=17.0 size=N/A time=00:01:17.20 bitrate=N/A dup=547 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 1165 fps= 15 q=19.0 size=N/A time=00:01:17.66 bitrate=N/A dup=550 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 1171 fps= 15 q=16.0 size=N/A time=00:01:18.06 bitrate=N/A dup=553 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1180 fps= 15 q=19.0 size=N/A time=00:01:18.66 bitrate=N/A dup=557 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 1191 fps= 15 q=17.0 size=N/A time=00:01:19.33 bitrate=N/A dup=562 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 1 times
+frame= 1195 fps= 15 q=19.0 size=N/A time=00:01:19.66 bitrate=N/A dup=564 drop=0 speed=0.996x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 11 times
+frame= 1220 fps= 15 q=16.0 size=N/A time=00:01:21.33 bitrate=N/A dup=576 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 1232 fps= 15 q=17.0 size=N/A time=00:01:22.06 bitrate=N/A dup=581 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 1237 fps= 15 q=17.0 size=N/A time=00:01:22.46 bitrate=N/A dup=584 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 1248 fps= 15 q=17.0 size=N/A time=00:01:23.20 bitrate=N/A dup=589 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+[hls @ 0x56bf2d191bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream3014.ts' for writing
+[AVIOContext @ 0x7641c4041040] Statistics: 9578600 bytes written, 0 seeks, 37 writeouts
+[hls @ 0x56bf2d191bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:2
+[AVIOContext @ 0x7641c4041040] Statistics: 173 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 1 times
+frame= 1255 fps= 15 q=19.0 size=N/A time=00:01:23.66 bitrate=N/A dup=592 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 1261 fps= 15 q=16.0 size=N/A time=00:01:24.06 bitrate=N/A dup=595 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1271 fps= 15 q=19.0 size=N/A time=00:01:24.66 bitrate=N/A dup=599 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 1280 fps= 15 q=16.0 size=N/A time=00:01:25.33 bitrate=N/A dup=604 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 1287 fps= 15 q=18.0 size=N/A time=00:01:25.80 bitrate=N/A dup=607 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+frame= 1289 fps= 15 q=17.0 size=N/A time=00:01:25.93 bitrate=N/A dup=608 drop=0 speed=0.994x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 1300 fps= 15 q=19.0 size=N/A time=00:01:26.66 bitrate=N/A dup=613 drop=0 speed=0.995x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 6 times
+frame= 1315 fps= 15 q=18.0 size=N/A time=00:01:27.66 bitrate=N/A dup=620 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 7 times
+frame= 1332 fps= 15 q=18.0 size=N/A time=00:01:28.80 bitrate=N/A dup=628 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 1342 fps= 15 q=17.0 size=N/A time=00:01:29.46 bitrate=N/A dup=633 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1351 fps= 15 q=16.0 size=N/A time=00:01:30.06 bitrate=N/A dup=637 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 1357 fps= 15 q=17.0 size=N/A time=00:01:30.46 bitrate=N/A dup=640 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1366 fps= 15 q=16.0 size=N/A time=00:01:31.06 bitrate=N/A dup=644 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1375 fps= 15 q=18.0 size=N/A time=00:01:31.66 bitrate=N/A dup=648 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 1381 fps= 15 q=16.0 size=N/A time=00:01:32.06 bitrate=N/A dup=651 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+frame= 1383 fps= 15 q=16.0 size=N/A time=00:01:32.20 bitrate=N/A dup=652 drop=0 speed=0.986x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1392 fps= 15 q=18.0 size=N/A time=00:01:32.80 bitrate=N/A dup=656 drop=0 speed=0.987x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame= 1404 fps= 15 q=16.0 size=N/A time=00:01:33.60 bitrate=N/A dup=662 drop=0 speed=0.99x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 1411 fps= 15 q=16.0 size=N/A time=00:01:34.06 bitrate=N/A dup=665 drop=0 speed=0.988x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 7 times
+frame= 1428 fps= 15 q=16.0 size=N/A time=00:01:35.20 bitrate=N/A dup=673 drop=0 speed=0.993x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 1435 fps= 15 q=19.0 size=N/A time=00:01:35.66 bitrate=N/A dup=676 drop=0 speed=0.992x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1443 fps= 15 q=17.0 size=N/A time=00:01:36.20 bitrate=N/A dup=680 drop=0 speed=0.992x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1452 fps= 15 q=18.0 size=N/A time=00:01:36.80 bitrate=N/A dup=684 drop=0 speed=0.993x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1460 fps= 15 q=16.0 size=N/A time=00:01:37.33 bitrate=N/A dup=688 drop=0 speed=0.992x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 1467 fps= 15 q=18.0 size=N/A time=00:01:37.80 bitrate=N/A dup=691 drop=0 speed=0.992x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1475 fps= 15 q=16.0 size=N/A time=00:01:38.33 bitrate=N/A dup=695 drop=0 speed=0.991x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+frame= 1476 fps= 15 q=16.0 size=N/A time=00:01:38.46 bitrate=N/A dup=696 drop=0 speed=0.979x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame= 1490 fps= 15 q=25.0 size=N/A time=00:01:39.33 bitrate=N/A dup=702 drop=0 speed=0.982x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+[hls @ 0x56bf2d191bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream3015.ts' for writing
+[AVIOContext @ 0x7641c4041040] Statistics: 9500768 bytes written, 0 seeks, 37 writeouts
+[hls @ 0x56bf2d191bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:3
+[AVIOContext @ 0x7641c4041040] Statistics: 173 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 1 times
+frame= 1505 fps= 15 q=16.0 size=N/A time=00:01:40.33 bitrate=N/A dup=709 drop=0 speed=0.987x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 7 times
+frame= 1522 fps= 15 q=17.0 size=N/A time=00:01:41.46 bitrate=N/A dup=717 drop=0 speed=0.993x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 1 times
+frame= 1527 fps= 15 q=18.0 size=N/A time=00:01:41.80 bitrate=N/A dup=719 drop=0 speed=0.99x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 13 times
+frame= 1557 fps= 15 q=18.0 size=N/A time=00:01:43.80 bitrate=N/A dup=733 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame= 1570 fps= 15 q=18.0 size=N/A time=00:01:44.66 bitrate=N/A dup=739 drop=0 speed=0.998x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 6 times
+frame= 1585 fps= 15 q=22.0 size=N/A time=00:01:45.66 bitrate=N/A dup=746 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 6 times
+frame= 1600 fps= 15 q=19.0 size=N/A time=00:01:46.66 bitrate=N/A dup=753 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 1610 fps= 15 q=16.0 size=N/A time=00:01:47.33 bitrate=N/A dup=758 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1619 fps= 15 q=17.0 size=N/A time=00:01:47.93 bitrate=N/A dup=762 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1627 fps= 15 q=16.0 size=N/A time=00:01:48.46 bitrate=N/A dup=766 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1636 fps= 15 q=16.0 size=N/A time=00:01:49.06 bitrate=N/A dup=770 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1645 fps= 15 q=18.0 size=N/A time=00:01:49.66 bitrate=N/A dup=774 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1653 fps= 15 q=16.0 size=N/A time=00:01:50.20 bitrate=N/A dup=778 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1662 fps= 15 q=18.0 size=N/A time=00:01:50.80 bitrate=N/A dup=782 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+frame= 1664 fps= 15 q=17.0 size=N/A time=00:01:50.93 bitrate=N/A dup=783 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 8 times
+frame= 1683 fps= 15 q=16.0 size=N/A time=00:01:52.20 bitrate=N/A dup=792 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 1695 fps= 15 q=17.0 size=N/A time=00:01:52.93 bitrate=N/A dup=797 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 1704 fps= 15 q=16.0 size=N/A time=00:01:53.60 bitrate=N/A dup=802 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 1712 fps= 15 q=16.0 size=N/A time=00:01:54.06 bitrate=N/A dup=805 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 1717 fps= 15 q=16.0 size=N/A time=00:01:54.46 bitrate=N/A dup=808 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1727 fps= 15 q=16.0 size=N/A time=00:01:55.06 bitrate=N/A dup=812 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1734 fps= 15 q=16.0 size=N/A time=00:01:55.60 bitrate=N/A dup=816 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1744 fps= 15 q=19.0 size=N/A time=00:01:56.20 bitrate=N/A dup=820 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+[hls @ 0x56bf2d191bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream3016.ts' for writing
+[AVIOContext @ 0x7641c4041040] Statistics: 9935800 bytes written, 0 seeks, 38 writeouts
+[hls @ 0x56bf2d191bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:4
+[AVIOContext @ 0x7641c4041040] Statistics: 173 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+frame= 1752 fps= 15 q=17.0 size=N/A time=00:01:56.80 bitrate=N/A dup=824 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 1758 fps= 15 q=16.0 size=N/A time=00:01:57.20 bitrate=N/A dup=827 drop=0 speed=0.999x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 9 times
+frame= 1780 fps= 15 q=18.0 size=N/A time=00:01:58.66 bitrate=N/A dup=837 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame= 1792 fps= 15 q=16.0 size=N/A time=00:01:59.46 bitrate=N/A dup=843 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1802 fps= 15 q=16.0 size=N/A time=00:02:00.06 bitrate=N/A dup=847 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1810 fps= 15 q=19.0 size=N/A time=00:02:00.66 bitrate=N/A dup=851 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 1820 fps= 15 q=16.0 size=N/A time=00:02:01.33 bitrate=N/A dup=856 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1829 fps= 15 q=17.0 size=N/A time=00:02:01.93 bitrate=N/A dup=860 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 1835 fps= 15 q=16.0 size=N/A time=00:02:02.33 bitrate=N/A dup=863 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 1846 fps= 15 q=17.0 size=N/A time=00:02:03.06 bitrate=N/A dup=868 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 1853 fps= 15 q=18.0 size=N/A time=00:02:03.46 bitrate=N/A dup=871 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 1863 fps= 15 q=19.0 size=N/A time=00:02:04.20 bitrate=N/A dup=876 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 1874 fps= 15 q=19.0 size=N/A time=00:02:04.93 bitrate=N/A dup=881 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 1885 fps= 15 q=18.0 size=N/A time=00:02:05.60 bitrate=N/A dup=886 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 1895 fps= 15 q=18.0 size=N/A time=00:02:06.33 bitrate=N/A dup=891 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 1902 fps= 15 q=21.0 size=N/A time=00:02:06.80 bitrate=N/A dup=894 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 1912 fps= 15 q=19.0 size=N/A time=00:02:07.46 bitrate=N/A dup=899 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 1919 fps= 15 q=19.0 size=N/A time=00:02:07.93 bitrate=N/A dup=902 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1927 fps= 15 q=19.0 size=N/A time=00:02:08.46 bitrate=N/A dup=906 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1936 fps= 15 q=18.0 size=N/A time=00:02:09.06 bitrate=N/A dup=910 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1944 fps= 15 q=18.0 size=N/A time=00:02:09.60 bitrate=N/A dup=914 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 1951 fps= 15 q=19.0 size=N/A time=00:02:10.06 bitrate=N/A dup=917 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1960 fps= 15 q=23.0 size=N/A time=00:02:10.66 bitrate=N/A dup=921 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame= 1973 fps= 15 q=18.0 size=N/A time=00:02:11.46 bitrate=N/A dup=927 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1981 fps= 15 q=17.0 size=N/A time=00:02:12.06 bitrate=N/A dup=931 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1989 fps= 15 q=16.0 size=N/A time=00:02:12.60 bitrate=N/A dup=935 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 1998 fps= 15 q=18.0 size=N/A time=00:02:13.20 bitrate=N/A dup=939 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+[hls @ 0x56bf2d191bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream3017.ts' for writing
+[AVIOContext @ 0x7641c4041040] Statistics: 9903276 bytes written, 0 seeks, 38 writeouts
+[hls @ 0x56bf2d191bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:5
+[AVIOContext @ 0x7641c4041040] Statistics: 173 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 1 times
+frame= 2005 fps= 15 q=20.0 size=N/A time=00:02:13.66 bitrate=N/A dup=942 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 2013 fps= 15 q=18.0 size=N/A time=00:02:14.20 bitrate=N/A dup=946 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 2020 fps= 15 q=20.0 size=N/A time=00:02:14.66 bitrate=N/A dup=949 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 2028 fps= 15 q=18.0 size=N/A time=00:02:15.20 bitrate=N/A dup=953 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 2037 fps= 15 q=20.0 size=N/A time=00:02:15.80 bitrate=N/A dup=957 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+frame= 2040 fps= 15 q=18.0 size=N/A time=00:02:15.93 bitrate=N/A dup=958 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame= 2051 fps= 15 q=20.0 size=N/A time=00:02:16.80 bitrate=N/A dup=964 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame= 2065 fps= 15 q=21.0 size=N/A time=00:02:17.66 bitrate=N/A dup=970 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 2074 fps= 15 q=19.0 size=N/A time=00:02:18.33 bitrate=N/A dup=975 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 2084 fps= 15 q=20.0 size=N/A time=00:02:18.93 bitrate=N/A dup=979 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 2092 fps= 15 q=20.0 size=N/A time=00:02:19.46 bitrate=N/A dup=983 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 2099 fps= 15 q=20.0 size=N/A time=00:02:19.93 bitrate=N/A dup=986 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 2107 fps= 15 q=19.0 size=N/A time=00:02:20.46 bitrate=N/A dup=990 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+frame= 2109 fps= 15 q=19.0 size=N/A time=00:02:20.60 bitrate=N/A dup=991 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame= 2122 fps= 15 q=19.0 size=N/A time=00:02:21.46 bitrate=N/A dup=997 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+[vost#0:0/libx264 @ 0x56bf2d085b00] More than 1000 frames duplicated
+frame= 2131 fps= 15 q=18.0 size=N/A time=00:02:22.06 bitrate=N/A dup=1001 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+frame= 2133 fps= 15 q=19.0 size=N/A time=00:02:22.20 bitrate=N/A dup=1002 drop=0 speed=0.999x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame= 2146 fps= 15 q=18.0 size=N/A time=00:02:23.06 bitrate=N/A dup=1008 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 7 times
+frame= 2163 fps= 15 q=18.0 size=N/A time=00:02:24.20 bitrate=N/A dup=1016 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 2172 fps= 15 q=19.0 size=N/A time=00:02:24.80 bitrate=N/A dup=1020 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 2180 fps= 15 q=17.0 size=N/A time=00:02:25.33 bitrate=N/A dup=1024 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 2189 fps= 15 q=18.0 size=N/A time=00:02:25.93 bitrate=N/A dup=1028 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 2197 fps= 15 q=17.0 size=N/A time=00:02:26.46 bitrate=N/A dup=1032 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 2204 fps= 15 q=18.0 size=N/A time=00:02:26.93 bitrate=N/A dup=1035 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 2214 fps= 15 q=17.0 size=N/A time=00:02:27.60 bitrate=N/A dup=1040 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 2223 fps= 15 q=18.0 size=N/A time=00:02:28.20 bitrate=N/A dup=1044 drop=0 speed=1.01x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 1 times
+frame= 2228 fps= 15 q=17.0 size=N/A time=00:02:28.46 bitrate=N/A dup=1046 drop=0 speed=0.994x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 6 times
+frame= 2241 fps= 15 q=23.0 size=N/A time=00:02:29.46 bitrate=N/A dup=1053 drop=0 speed=0.998x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+[hls @ 0x56bf2d191bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream3018.ts' for writing
+[AVIOContext @ 0x7641c4041040] Statistics: 10384744 bytes written, 0 seeks, 40 writeouts
+[hls @ 0x56bf2d191bc0] Opening '/home/vctech/Desktop/live-stream-app/streams/stream301.m3u8.tmp' for writing
+EXT-X-MEDIA-SEQUENCE:6
+[AVIOContext @ 0x7641c4041040] Statistics: 173 bytes written, 0 seeks, 1 writeouts
+[vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 2257 fps= 15 q=18.0 size=N/A time=00:02:30.46 bitrate=N/A dup=1060 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 2268 fps= 15 q=18.0 size=N/A time=00:02:31.20 bitrate=N/A dup=1065 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 2275 fps= 15 q=20.0 size=N/A time=00:02:31.66 bitrate=N/A dup=1068 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame= 2287 fps= 15 q=18.0 size=N/A time=00:02:32.46 bitrate=N/A dup=1074 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 2294 fps= 15 q=18.0 size=N/A time=00:02:32.93 bitrate=N/A dup=1077 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 2302 fps= 15 q=18.0 size=N/A time=00:02:33.46 bitrate=N/A dup=1081 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 2311 fps= 15 q=18.0 size=N/A time=00:02:34.06 bitrate=N/A dup=1085 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 2 times
+frame= 2318 fps= 15 q=18.0 size=N/A time=00:02:34.46 bitrate=N/A dup=1088 drop=0 speed=   1x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+frame= 2320 fps= 15 q=20.0 size=N/A time=00:02:34.66 bitrate=N/A dup=1089 drop=0 speed=0.99x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame= 2332 fps= 15 q=18.0 size=N/A time=00:02:35.46 bitrate=N/A dup=1095 drop=0 speed=0.992x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 2341 fps= 15 q=17.0 size=N/A time=00:02:36.06 bitrate=N/A dup=1099 drop=0 speed=0.992x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 3 times
+frame= 2350 fps= 15 q=19.0 size=N/A time=00:02:36.66 bitrate=N/A dup=1103 drop=0 speed=0.992x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 6 times
+frame= 2365 fps= 15 q=19.0 size=N/A time=00:02:37.66 bitrate=N/A dup=1110 drop=0 speed=0.995x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 5 times
+frame= 2377 fps= 15 q=17.0 size=N/A time=00:02:38.46 bitrate=N/A dup=1116 drop=0 speed=0.997x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 4 times
+frame= 2387 fps= 15 q=17.0 size=N/A time=00:02:39.20 bitrate=N/A dup=1121 drop=0 speed=0.998x    [vost#0:0/libx264 @ 0x56bf2d085b00] *** 1 dup!
+    Last message repeated 9 times
+frame= 2409 fps= 15 q=17.0 size=N/A time=00:02:40.60 bitrate=N/A dup=1131 drop=0 speed=   1x    
