@@ -5,12 +5,12 @@ const path = require("path");
 
 const app = express();
 
-// Define paths for streams and logs on Vercel
+// Define paths for streams and logs in Vercel's /tmp directory (Writable environment)
 const streamsPath = "/tmp/streams"; // Temporary directory in Vercel
 const logsPath = "/tmp/logs"; // Temporary logs directory
-const ffmpegPath = "ffmpeg"; // Make sure ffmpeg is available in Vercel's environment
+const ffmpegPath = require('ffmpeg-static'); // Ensure ffmpeg-static is included in your dependencies
 
-// Ensure directories exist in the Vercel environment
+// Ensure directories exist in the /tmp environment
 if (!fs.existsSync(streamsPath)) {
     fs.mkdirSync(streamsPath, { recursive: true });
 }
@@ -63,7 +63,7 @@ channels.forEach(({ channel, ip }) => {
     });
 });
 
-// Serve static HLS files
+// Serve static HLS files from /tmp/streams
 app.use("/streams", express.static(streamsPath));
 
 // All streams page

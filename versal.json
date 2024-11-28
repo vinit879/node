@@ -13,7 +13,7 @@
         },
         {
             "src": "/streams/(.*)",
-            "dest": "/main.js"
+            "dest": "/main.js"  // Temporary workaround, but needs adjustment
         }
     ]
 }

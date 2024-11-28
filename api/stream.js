@@ -1,5 +1,5 @@
-const { exec } = require('child_process');
-const fs = require('fs');
+const { exec } = require("child_process");
+const fs = require("fs");
 
 module.exports = async (req, res) => {
     const { channel } = req.query;
